@@ -12,7 +12,7 @@ module accumlator #(
     output logic [WIDTH-1:0]     out
 
 );
-
+    // testing comment
     // on every cycle sum the 
     always_ff @(posedge clk) begin
         if (reset) begin
