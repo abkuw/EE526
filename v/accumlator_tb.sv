@@ -54,7 +54,7 @@ module accumlator_tb();
             @(posedge clk);
             @(posedge clk);
 
-        $stop;
+        $finsih;
     end
 
 endmodule
