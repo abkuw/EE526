@@ -7,7 +7,6 @@ module accumlator #(
 ) (
     input  logic                 clk,
     input  logic                 reset,     
-    input  logic                 enable,    // accumulate only when high? Possibly don't need
     input  logic [WIDTH-1:0]     in,
     output logic [WIDTH-1:0]     out
 
@@ -17,7 +16,7 @@ module accumlator #(
     always_ff @(posedge clk) begin
         if (reset) begin
             out <= '0;
-        end else if (enable) begin
+        end else begin
             out <= out + in;
         end
     end
