@@ -9,9 +9,8 @@ module DP #(parameter B = 4,
         input reset_i,
         input [quantized_width-1:0] data_i,
         input [quantized_width-1:0] weight_i,
-        output [quantized_width-1:0] data_h_o,
+        output [quantized_width-1:0] weight_h_o,
         output[quantized_width-1:0] data_v_o,
-        output[quantized_width-1:0] weight_v_o,
         output[2*quantized_width-1:0] result;
         
     );
@@ -26,13 +25,13 @@ module DP #(parameter B = 4,
 
     always_ff @(posedge clk_i or posedge reset_i) begin
         if(reset_i) begin
-            weight_v_o <=0;
-            data_h_o <=0;
+            data_v_o <=0;
+            weight_h_o <=0;
             result <=0
         end
         else begin
-            weight_v_o <= weight_i;
-            data_h_o <= data_i;
+            weight_h_o <= weight_i;
+            data_v_o <= data_i;
             result <= result+ product;
         end
 
