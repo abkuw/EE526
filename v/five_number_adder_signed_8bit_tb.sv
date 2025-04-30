@@ -89,7 +89,19 @@ module five_number_adder_signed_8bit_tb;
         $display("Test 6: %d + %d + %d + %d + %d = %d (Expected: %d)", 
                  $signed(a), $signed(b), $signed(c), $signed(d), $signed(e), 
                  $signed(sum), $signed(expected[7:0]));
-        
+					  
+			// Test case 7: Simple negative + positive (-5 + 3 = -2, other inputs 0)
+			a = 8'hFB;  // -5 in 2's complement
+			b = 8'h03;  // +3
+			c = 8'h00;
+			d = 8'h00;
+			e = 8'h00;
+			expected = -11'd2; // -5 + 3 = -2
+			#10;
+			$display("Test 7: %d + %d + %d + %d + %d = %d (Expected: %d)", 
+						$signed(a), $signed(b), $signed(c), $signed(d), $signed(e), 
+						$signed(sum), $signed(expected[7:0]));
+					  
         $finish;
     end
 endmodule

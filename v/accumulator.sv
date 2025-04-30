@@ -1,18 +1,16 @@
 // Abhishek Kumar, Keith Phou
 // EE 526
 
-// Sums mulitple sequnetial inputs over time
-module accumlator #(
+// Sums multiple sequential inputs over time
+module accumulator #(
     parameter WIDTH = 32
 ) (
     input  logic                 clk,
     input  logic                 reset,     
     input  logic [WIDTH-1:0]     in,
     output logic [WIDTH-1:0]     out
-
 );
-    // testing comment
-    // on every cycle sum the 
+    // on every cycle sum the input
     always_ff @(posedge clk) begin
         if (reset) begin
             out <= '0;
@@ -20,5 +18,4 @@ module accumlator #(
             out <= out + in;
         end
     end
-
 endmodule
