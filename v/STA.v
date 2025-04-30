@@ -1,3 +1,5 @@
+'include "PE.v"
+// Systolic Tensor Array (STA) Module
 module STA #(parameter N = 32,
             parameter M =32,
             //PE paramters
