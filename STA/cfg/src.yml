@@ -1,14 +1,20 @@
 # List of all Verilog source files to include in this build.
 # Used by both synthesis and RTL simulation.
 synthesis.inputs.input_files: [
-  "v/STA.v",
-  "v/accumulator.v",
-  "v/DP.v",
+  "v/tb_STA.sv",
+  # BSG utilities
+  "${bsg_root}/bsg_misc/bsg_defines.v",
+  "${bsg_root}/bsg_test/bsg_nonsynth_clock_gen.v",
+  "${bsg_root}/bsg_test/bsg_nonsynth_reset_gen.v",
+  "${bsg_root}/bsg_fsb/bsg_fsb_node_trace_replay.v",
+  # "${bsg_root}/bsg_misc/bsg_buf.v",
+  "v/STA.sv",
+  "v/PE.sv",
+  "v/DP.sv",
+  "v/accumulator.sv",
   "v/five_number_adder_signed_8bit.sv",
   "v/adder.sv",
-  "v/PE.v",
-  "${bsg_root}/bsg_misc/bsg_buff.v",
-   
+  "${bsg_root}/bsg_misc/bsg_buf.v",
 ]
 synthesis.inputs.input_files_meta: [append, subst]
 

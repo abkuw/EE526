@@ -7,13 +7,20 @@ sim.inputs.tb_incdir_meta: [subst]
 # List of Verilog testbenches (or other sources) needed for simulation only.
 sim.inputs.tb_input_files: [
   # Testbench top
-  "v/tb_STA.v",
+  "v/tb_STA.sv",
+  "v/five_number_adder_signed_8bit_tb.sv",
   # BSG utilities
   "${bsg_root}/bsg_misc/bsg_defines.v",
   "${bsg_root}/bsg_test/bsg_nonsynth_clock_gen.v",
   "${bsg_root}/bsg_test/bsg_nonsynth_reset_gen.v",
   "${bsg_root}/bsg_fsb/bsg_fsb_node_trace_replay.v",
-  "${bsg_root}/bsg_misc/bsg_buff.v",
+  # "${bsg_root}/bsg_misc/bsg_buf.v",
+  "v/STA.sv",
+  "v/PE.sv",
+  "v/DP.sv",
+  "v/accumulator.sv",
+  "v/five_number_adder_signed_8bit.sv",
+  "v/adder.sv",
 ]
 sim.inputs.tb_input_files_meta: [append, subst]
 

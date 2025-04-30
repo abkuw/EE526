@@ -1,4 +1,5 @@
-`include "DP.v"
+`include "v/DP.sv"
+`include "/homes/akumar08/basejump_stl/bsg_misc/bsg_buf.v"
 module PE #(parameter B =4,
             parameter C =2,
             parameter A =2,
@@ -11,7 +12,7 @@ module PE #(parameter B =4,
         output [2*B-1:0] data_o[quantized_size-1:0],
         output [2*B-1:0] weights_o[quantized_size-1:0]
         
-    )
+    );
     //row
     logic [quantized_size-1:0] datadp1_o;
     logic [quantized_size-1:0] weightdp1_o;
@@ -35,10 +36,10 @@ module PE #(parameter B =4,
     DP DP3 (.clk_i(clk_i),.reset_i(reset_i),.data_i(datadp1_o),.weight_i(weights_i[quantized_size-1:quantized_size/2+1]),.weight_h_o(weightdp3_o),.data_v_o(buff3_i),.result(resultdp3));
     DP DP4 (.clk_i(clk_i),.reset_i(reset_i),.data_i(datadp2_o),.weight_i(weightdp3_o),.weight_h_o(buff4w_i),.data_v_o(buff4d_i),.result(resultdp4));
 
-    bsg_buf buff2 #(.width_p(quantized_size))(.input(buff2_i),.output(data_o[quantized_size/2-1:0]));
-    bsg_buf buff3 #(.width_p(quantized_size))(.input(buff3_i),.output(weights_o[quantized_size/2-1:0]));
-    bsg_buf buff4w #(.width_p(quantized_size))(.input(buff4w_i),.output(weights_o[quantized_size-1:quantized_size/2+1]));
-    bsg_buf buff4d #(.width_p(quantized_size))(.input(buff4d_i),.output(data_o[quantized_size-1: quantized_size/2+1]));
+    bsg_buf #(.width_p(quantized_size)) buff2(.i(buff2_i),.o(data_o[quantized_size/2-1:0]));
+    bsg_buf #(.width_p(quantized_size)) buff3(.i(buff3_i),.o(weights_o[quantized_size/2-1:0]));
+    bsg_buf #(.width_p(quantized_size)) buff4w(.i(buff4w_i),.o(weights_o[quantized_size-1:quantized_size/2+1]));
+    bsg_buf #(.width_p(quantized_size)) buff4d(.i(buff4d_i),.o(data_o[quantized_size-1: quantized_size/2+1]));
 
 
 endmodule

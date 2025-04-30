@@ -1,23 +1,21 @@
-'include "PE.v"
+`include "v/PE.sv"
 // Systolic Tensor Array (STA) Module
-module STA #(parameter N = 32,
-            parameter M =32,
-            //PE paramters
-            parameter B = 4,
-            parameter C = 2,
-            parameter A = 2,
-            parameter quantized_size = 8
-            ),
-            (
-                input clk_i,
-                input reset_i,
-                input[N-1:0] data_i[2*B-1:0][quantized_size-1:0],
-                input[M-1:0]weights_i[2*B-1:0][quantized_size-1:0],
-                output[N-1:0] data_o[2*B-1:0][quantized_size-1:0],
-                output[M-1:0]weights_o[2*B-1:0][quantized_size-1:0], 
-                
+module STA #(
+    parameter N = 32,
+    parameter M = 32,
+    parameter B = 4,
+    parameter C = 2,
+    parameter A = 2,
+    parameter quantized_size = 8
+)(
+    input clk_i,
+    input reset_i,
+    input [N-1:0] data_i [2*B-1:0][quantized_size-1:0],
+    input [M-1:0] weights_i [2*B-1:0][quantized_size-1:0],
+    output [N-1:0] data_o [2*B-1:0][quantized_size-1:0],
+    output [M-1:0] weights_o [2*B-1:0][quantized_size-1:0]
+);
 
-            );
 
     typedef logic [2*B-1:0]data_element_t[quantized_size-1:0];
 
@@ -31,7 +29,7 @@ module STA #(parameter N = 32,
     genvar r;
     generate
         for (r =0; r<M; r=r+1) begin: assign_weights_i
-            assign_weights_signals[r][0] = weights_i[r]; 
+            assign weights_signals[r][0] = weights_i[r]; 
         end
     endgenerate
 
