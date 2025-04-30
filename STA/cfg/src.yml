@@ -1,7 +1,12 @@
 # List of all Verilog source files to include in this build.
 # Used by both synthesis and RTL simulation.
 synthesis.inputs.input_files: [
-  "v/BERT_top.v",
+  "v/STA.v",
+  "v/accumulator.v",
+  "v/DP.v",
+  "v/five_number_adder_signed_8bit.sv",
+  "v/adder.sv",
+  "v/PE.v",
   "${bsg_root}/bsg_misc/bsg_buff.v",
    
 ]

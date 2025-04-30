@@ -7,20 +7,19 @@ sim.inputs.tb_incdir_meta: [subst]
 # List of Verilog testbenches (or other sources) needed for simulation only.
 sim.inputs.tb_input_files: [
   # Testbench top
-  "v/BERT_top_tb.v",
+  "v/tb_STA.v",
   # BSG utilities
   "${bsg_root}/bsg_misc/bsg_defines.v",
   "${bsg_root}/bsg_test/bsg_nonsynth_clock_gen.v",
   "${bsg_root}/bsg_test/bsg_nonsynth_reset_gen.v",
   "${bsg_root}/bsg_fsb/bsg_fsb_node_trace_replay.v",
-  "${bsg_root}/bsg_misc/bsg_popcount.v",
   "${bsg_root}/bsg_misc/bsg_buff.v",
 ]
 sim.inputs.tb_input_files_meta: [append, subst]
 
 # List of trace files for the simulation
-sim.inputs.trace_files: [
-  'v/trace.tr',
-]
+# sim.inputs.trace_files: [
+#   'v/trace.tr',
+# ]
 
 
