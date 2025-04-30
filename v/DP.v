@@ -32,9 +32,7 @@ module DP #(parameter B = 4,
     end
 
     five_number_adder_signed_8bit PA #(.a(partial_product[0]),.b(partial_product[1]),.c(partial_product[2]),.d(partial_product[3]),.e(prev_acc))(.sum(product));
-        
     
-
     always_ff @(posedge clk_i or posedge reset_i) begin
         if(reset_i) begin
             data_v_o <='0;
