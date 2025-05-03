@@ -1,45 +1,162 @@
+// Assuming DP.sv contains the corrected DP module with parameters B and QUANTIZED_WIDTH
 `include "v/DP.sv"
-`include "/homes/akumar08/basejump_stl/bsg_misc/bsg_buf.v"
-module PE #(parameter B =4,
-            parameter C =2,
-            parameter A =2,
-            parameter quantized_size = 8)
-    (
-        input clk_i,
-        input reset_i,
-        input [2*B -1 :0] data_i[quantized_size-1:0],
-        input [2*B-1 :0] weights_i[quantized_size-1:0],
-        output [2*B-1:0] data_o[quantized_size-1:0],
-        output [2*B-1:0] weights_o[quantized_size-1:0]
-        
+
+// Define a simple registered buffer module locally or include from a separate file
+module SimpleRegisteredBuffer #(
+    parameter WIDTH = 8
+) (
+    input logic clk_i,
+    input logic reset_i, // Active-high reset
+    input logic [WIDTH-1:0] i,
+    output logic [WIDTH-1:0] o
+);
+
+    // Use standard synchronous logic with reset
+    always_ff @(posedge clk_i or posedge reset_i) begin
+        if (reset_i) begin
+            o <= '0; // Reset output to all zeros
+        end else begin
+            o <= i;  // Capture input on clock edge
+        end
+    end
+
+endmodule
+
+
+// Main PE Module
+module PE #(
+    parameter B = 4,
+    parameter C = 2, // Columns of DPs within PE
+    parameter A = 2, // Rows of DPs within PE
+    parameter QUANTIZED_WIDTH = 8 // Renamed from quantized_size
+) (
+    input logic clk_i,
+    input logic reset_i,
+
+    // PE Inputs: Array of B*C data vectors, B*A weight vectors
+    input logic signed [QUANTIZED_WIDTH-1:0] data_i   [B*C-1:0], // e.g., [7:0] elements for B=4, C=2
+    input logic signed [QUANTIZED_WIDTH-1:0] weights_i[B*A-1:0], // e.g., [7:0] elements for B=4, A=2
+
+    // PE Outputs: Array of B*C data vectors, B*A weight vectors
+    output logic signed [QUANTIZED_WIDTH-1:0] data_o   [B*C-1:0],
+    output logic signed [QUANTIZED_WIDTH-1:0] weights_o[B*A-1:0]
+);
+
+    // --- Sanity Checks ---
+    // This specific implementation hardcodes a 2x2 DP structure
+    initial begin
+        if (A != 2 || C != 2) begin
+            $fatal(1, "PE Instantiation Error: This PE implementation requires A=2 and C=2. Got A=%d, C=%d.", A, C);
+        end
+    end
+
+    // --- Derived Parameters ---
+    localparam DP_VECTOR_COUNT      = B;
+    // Define the type for an array of B vectors, each QUANTIZED_WIDTH bits wide
+    typedef logic signed [QUANTIZED_WIDTH-1:0] dp_vector_array_t [DP_VECTOR_COUNT-1:0];
+    // Calculate the total width when this array is flattened into a single vector
+    localparam DP_FLAT_ARRAY_WIDTH  = DP_VECTOR_COUNT * QUANTIZED_WIDTH;
+    // Define the width of the accumulator result from the DP module
+    localparam ACCUMULATOR_WIDTH    = 4 * QUANTIZED_WIDTH;
+
+    // --- Internal Signals ---
+
+    // Signals between DPs (Using the defined array type)
+    dp_vector_array_t dp1_data_v_o;   // Data passed down from DP1
+    dp_vector_array_t dp1_weight_h_o; // Weight passed right from DP1
+    dp_vector_array_t dp2_data_v_o;   // Data passed down from DP2
+    dp_vector_array_t dp2_weight_h_o; // Weight passed right from DP2 (to PE output buffer)
+    dp_vector_array_t dp3_data_v_o;   // Data passed down from DP3 (to PE output buffer)
+    dp_vector_array_t dp3_weight_h_o; // Weight passed right from DP3
+    dp_vector_array_t dp4_data_v_o;   // Data passed down from DP4 (to PE output buffer)
+    dp_vector_array_t dp4_weight_h_o; // Weight passed right from DP4 (to PE output buffer)
+
+    // DP accumulator results (Correct type, although unused locally)
+    logic signed [ACCUMULATOR_WIDTH-1:0] resultdp1, resultdp2, resultdp3, resultdp4;
+
+    // --- DP Instantiations (2x2 Structure) ---
+
+    // Row 1
+    DP #( .B(B), .QUANTIZED_WIDTH(QUANTIZED_WIDTH) ) DP1 (
+        .clk_i(clk_i), .reset_i(reset_i),
+        .data_i(data_i[0 +: B]),          // Data input for DP1 (e.g., data_i[0..3])
+        .weight_i(weights_i[0 +: B]),    // Weight input for DP1 (e.g., weights_i[0..3])
+        .weight_h_o(dp1_weight_h_o),     // Weight out to DP2
+        .data_v_o(dp1_data_v_o),         // Data out to DP3
+        .result(resultdp1)
     );
-    //row
-    logic [quantized_size-1:0] datadp1_o;
-    logic [quantized_size-1:0] weightdp1_o;
 
-    logic [quantized_size-1:0] datadp2_o;
-    logic [quantized_size-1:0] weightdp3_o;
+    DP #( .B(B), .QUANTIZED_WIDTH(QUANTIZED_WIDTH) ) DP2 (
+        .clk_i(clk_i), .reset_i(reset_i),
+        .data_i(data_i[B +: B]),          // Data input for DP2 (e.g., data_i[4..7])
+        .weight_i(dp1_weight_h_o),       // Weight input from DP1
+        .weight_h_o(dp2_weight_h_o),     // Weight out right (buffered to weights_o[0..B-1])
+        .data_v_o(dp2_data_v_o),         // Data out down to DP4
+        .result(resultdp2)
+    );
 
-    // output is sent to the buffer
-    logic [quantized_size-1:0] buff2_i;
-    logic [quantized_size-1:0] buff3_i;
-    logic [quantized_size-1:0] buff4w_i;
-    logic [quantized_size-1:0] buff4d_i;
-    //results
-    logic resultdp1, resultdp2, resultdp3, resultdp4;
+    // Row 2
+    DP #( .B(B), .QUANTIZED_WIDTH(QUANTIZED_WIDTH) ) DP3 (
+        .clk_i(clk_i), .reset_i(reset_i),
+        .data_i(dp1_data_v_o),           // Data input from DP1
+        .weight_i(weights_i[B +: B]),    // Weight input for DP3 (e.g., weights_i[4..7])
+        .weight_h_o(dp3_weight_h_o),     // Weight out to DP4
+        .data_v_o(dp3_data_v_o),         // Data out down (buffered to data_o[0..B-1])
+        .result(resultdp3)
+    );
 
-    //first row
-    DP DP1 (.clk_i(clk_i),.reset_i(reset_i),.data_i(data_i[quantized_size/2 -1 :0]),.weight_i(weights_i[quantized_size/2 -1:0]),.weight_h_o(weightdp1_o),.data_v_o(datadp1_o),.result(resultdp1));
-    DP DP2 (.clk_i(clk_i),.reset_i(reset_i),.data_i(data_i[quantized_size-1 :quantized_size/2+1]),.weight_i(weightdp1_o),.weight_h_o(buff2_i),.data_v_o(datadp2_o),.result(resultdp2));
- 
-    //second row
-    DP DP3 (.clk_i(clk_i),.reset_i(reset_i),.data_i(datadp1_o),.weight_i(weights_i[quantized_size-1:quantized_size/2+1]),.weight_h_o(weightdp3_o),.data_v_o(buff3_i),.result(resultdp3));
-    DP DP4 (.clk_i(clk_i),.reset_i(reset_i),.data_i(datadp2_o),.weight_i(weightdp3_o),.weight_h_o(buff4w_i),.data_v_o(buff4d_i),.result(resultdp4));
+    DP #( .B(B), .QUANTIZED_WIDTH(QUANTIZED_WIDTH) ) DP4 (
+        .clk_i(clk_i), .reset_i(reset_i),
+        .data_i(dp2_data_v_o),           // Data input from DP2
+        .weight_i(dp3_weight_h_o),       // Weight input from DP3
+        .weight_h_o(dp4_weight_h_o),     // Weight out right (buffered to weights_o[B..2B-1])
+        .data_v_o(dp4_data_v_o),         // Data out down (buffered to data_o[B..2B-1])
+        .result(resultdp4)
+    );
 
-    bsg_buf #(.width_p(quantized_size)) buff2(.i(buff2_i),.o(data_o[quantized_size/2-1:0]));
-    bsg_buf #(.width_p(quantized_size)) buff3(.i(buff3_i),.o(weights_o[quantized_size/2-1:0]));
-    bsg_buf #(.width_p(quantized_size)) buff4w(.i(buff4w_i),.o(weights_o[quantized_size-1:quantized_size/2+1]));
-    bsg_buf #(.width_p(quantized_size)) buff4d(.i(buff4d_i),.o(data_o[quantized_size-1: quantized_size/2+1]));
 
+    // --- Output Buffering using SimpleRegisteredBuffer ---
+
+    // Signals for buffer inputs/outputs (flattened vectors)
+    logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_w_out1_i, flat_buf_w_out1_o; // DP2 -> weights_o[0+:B]
+    logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_d_out0_i, flat_buf_d_out0_o; // DP3 -> data_o[0+:B]
+    logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_w_out0_i, flat_buf_w_out0_o; // DP4 -> weights_o[B+:B]
+    logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_d_out1_i, flat_buf_d_out1_o; // DP4 -> data_o[B+:B]
+
+    // Flatten DP outputs going to buffers (using bitstream casting)
+    // The outputs from DPs are combinational or registered depending on DP internal logic.
+    // We assume they are stable before the clock edge where the buffer captures them.
+    
+    assign flat_buf_w_out1_i = DP_FLAT_ARRAY_WIDTH'(dp2_weight_h_o); // Weights from DP2 (Right Top)
+    assign flat_buf_d_out0_i = DP_FLAT_ARRAY_WIDTH'(dp3_data_v_o);    // Data from DP3 (Down Left)
+    assign flat_buf_w_out0_i = DP_FLAT_ARRAY_WIDTH'(dp4_weight_h_o); // Weights from DP4 (Right Bottom)
+    assign flat_buf_d_out1_i = DP_FLAT_ARRAY_WIDTH'(dp4_data_v_o);    // Data from DP4 (Down Right)
+
+    // Instantiate Buffers (Pass flattened width, connect clock and reset)
+    SimpleRegisteredBuffer #( .WIDTH(DP_FLAT_ARRAY_WIDTH) ) buf_weights_out_1 (
+        .clk_i(clk_i), .reset_i(reset_i),
+        .i(flat_buf_w_out1_i), .o(flat_buf_w_out1_o) // Weights DP2 -> weights_o[0+:B]
+    );
+    SimpleRegisteredBuffer #( .WIDTH(DP_FLAT_ARRAY_WIDTH) ) buf_data_out_0 (
+        .clk_i(clk_i), .reset_i(reset_i),
+        .i(flat_buf_d_out0_i), .o(flat_buf_d_out0_o) // Data DP3    -> data_o[0+:B]
+    );
+    SimpleRegisteredBuffer #( .WIDTH(DP_FLAT_ARRAY_WIDTH) ) buf_weights_out_0 (
+        .clk_i(clk_i), .reset_i(reset_i),
+        .i(flat_buf_w_out0_i), .o(flat_buf_w_out0_o) // Weights DP4 -> weights_o[B+:B]
+    );
+    SimpleRegisteredBuffer #( .WIDTH(DP_FLAT_ARRAY_WIDTH) ) buf_data_out_1 (
+        .clk_i(clk_i), .reset_i(reset_i),
+        .i(flat_buf_d_out1_i), .o(flat_buf_d_out1_o) // Data DP4    -> data_o[B+:B]
+    );
+
+    // Unflatten buffer outputs and assign to PE outputs using correct slices
+    // Assign weights output (from right column DP2 and DP4 buffers)
+    assign weights_o[0 +: B] = dp_vector_array_t'(flat_buf_w_out1_o); // Unflatten DP2 weights buffer output
+    assign weights_o[B +: B] = dp_vector_array_t'(flat_buf_w_out0_o); // Unflatten DP4 weights buffer output
+
+    // Assign data output (from bottom row DP3 and DP4 buffers)
+    assign data_o[0 +: B] = dp_vector_array_t'(flat_buf_d_out0_o); // Unflatten DP3 data buffer output
+    assign data_o[B +: B] = dp_vector_array_t'(flat_buf_d_out1_o); // Unflatten DP4 data buffer output
 
 endmodule
