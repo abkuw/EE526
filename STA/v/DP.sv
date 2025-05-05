@@ -64,8 +64,8 @@ module DP #(
         if (reset_i) begin
             // Reset registers to zero
             // Use simple '0 assignment, SystemVerilog infers dimensions
-            data_v_o   <= '0;
-            weight_h_o <= '0;
+            data_v_o   <= '{default: '0};
+            weight_h_o <= '{default: '0};
             result_reg <= '0;
 
             /* Added for testbenching I needed this for simulation to run - Keith
