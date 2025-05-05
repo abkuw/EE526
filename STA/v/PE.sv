@@ -159,7 +159,7 @@ module PE #(
     assign data_o[0 +: B] = dp_vector_array_t'(flat_buf_d_out0_o); // Unflatten DP3 data buffer output
     assign data_o[B +: B] = dp_vector_array_t'(flat_buf_d_out1_o); // Unflatten DP4 data buffer output
 
-    /*
+    /* Needed to change for testbenching
 	// Signals for buffer inputs/outputs (flattened vectors)
 	logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_w_out1_i, flat_buf_w_out1_o; // DP2 -> weights_o[0+:B]
 	logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_d_out0_i, flat_buf_d_out0_o; // DP3 -> data_o[0+:B]
