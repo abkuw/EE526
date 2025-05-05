@@ -159,4 +159,53 @@ module PE #(
     assign data_o[0 +: B] = dp_vector_array_t'(flat_buf_d_out0_o); // Unflatten DP3 data buffer output
     assign data_o[B +: B] = dp_vector_array_t'(flat_buf_d_out1_o); // Unflatten DP4 data buffer output
 
+    /*
+	// Signals for buffer inputs/outputs (flattened vectors)
+	logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_w_out1_i, flat_buf_w_out1_o; // DP2 -> weights_o[0+:B]
+	logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_d_out0_i, flat_buf_d_out0_o; // DP3 -> data_o[0+:B]
+	logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_w_out0_i, flat_buf_w_out0_o; // DP4 -> weights_o[B+:B]
+	logic [DP_FLAT_ARRAY_WIDTH-1:0] flat_buf_d_out1_i, flat_buf_d_out1_o; // DP4 -> data_o[B+:B]
+
+	// Flatten DP outputs going to buffers by concatenating individual elements
+	// Instead of using casting, we'll use a generate block to create the proper concatenation
+	genvar gv_i;
+	generate
+		 for (gv_i = 0; gv_i < B; gv_i++) begin : flatten_arrays
+			  // Each array element is QUANTIZED_WIDTH bits, placed at the right position in the flattened vector
+			  assign flat_buf_w_out1_i[(gv_i+1)*QUANTIZED_WIDTH-1 : gv_i*QUANTIZED_WIDTH] = dp2_weight_h_o[gv_i];
+			  assign flat_buf_d_out0_i[(gv_i+1)*QUANTIZED_WIDTH-1 : gv_i*QUANTIZED_WIDTH] = dp3_data_v_o[gv_i];
+			  assign flat_buf_w_out0_i[(gv_i+1)*QUANTIZED_WIDTH-1 : gv_i*QUANTIZED_WIDTH] = dp4_weight_h_o[gv_i];
+			  assign flat_buf_d_out1_i[(gv_i+1)*QUANTIZED_WIDTH-1 : gv_i*QUANTIZED_WIDTH] = dp4_data_v_o[gv_i];
+		 end
+	endgenerate
+
+	// Instantiate Buffers (Pass flattened width, connect clock and reset)
+	SimpleRegisteredBuffer #( .WIDTH(DP_FLAT_ARRAY_WIDTH) ) buf_weights_out_1 (
+		 .clk_i(clk_i), .reset_i(reset_i),
+		 .i(flat_buf_w_out1_i), .o(flat_buf_w_out1_o) // Weights DP2 -> weights_o[0+:B]
+	);
+	SimpleRegisteredBuffer #( .WIDTH(DP_FLAT_ARRAY_WIDTH) ) buf_data_out_0 (
+		 .clk_i(clk_i), .reset_i(reset_i),
+		 .i(flat_buf_d_out0_i), .o(flat_buf_d_out0_o) // Data DP3    -> data_o[0+:B]
+	);
+	SimpleRegisteredBuffer #( .WIDTH(DP_FLAT_ARRAY_WIDTH) ) buf_weights_out_0 (
+		 .clk_i(clk_i), .reset_i(reset_i),
+		 .i(flat_buf_w_out0_i), .o(flat_buf_w_out0_o) // Weights DP4 -> weights_o[B+:B]
+	);
+	SimpleRegisteredBuffer #( .WIDTH(DP_FLAT_ARRAY_WIDTH) ) buf_data_out_1 (
+		 .clk_i(clk_i), .reset_i(reset_i),
+		 .i(flat_buf_d_out1_i), .o(flat_buf_d_out1_o) // Data DP4    -> data_o[B+:B]
+	);
+
+	// Unflatten buffer outputs back into arrays
+	generate
+		 for (gv_i = 0; gv_i < B; gv_i++) begin : unflatten_arrays
+			  // Each array element is extracted from the flattened vector
+			  assign weights_o[0 + gv_i] = flat_buf_w_out1_o[(gv_i+1)*QUANTIZED_WIDTH-1 : gv_i*QUANTIZED_WIDTH];
+			  assign data_o[0 + gv_i] = flat_buf_d_out0_o[(gv_i+1)*QUANTIZED_WIDTH-1 : gv_i*QUANTIZED_WIDTH];
+			  assign weights_o[B + gv_i] = flat_buf_w_out0_o[(gv_i+1)*QUANTIZED_WIDTH-1 : gv_i*QUANTIZED_WIDTH];
+			  assign data_o[B + gv_i] = flat_buf_d_out1_o[(gv_i+1)*QUANTIZED_WIDTH-1 : gv_i*QUANTIZED_WIDTH];
+		 end
+	endgenerate
+    */
 endmodule
