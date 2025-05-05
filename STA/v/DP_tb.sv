@@ -2,7 +2,7 @@
 // EE 526
 
 // Testbench for the DP (Dot Product)
-module dp_tb;
+module DP_tb;
     localparam int B = 4;                   // Number of parallel multipliers
     localparam int QUANTIZED_WIDTH = 8;     // Bit-width of input data/weights
     localparam int RESULT_WIDTH = 4*QUANTIZED_WIDTH;  // Width of accumulator
@@ -73,6 +73,7 @@ module dp_tb;
         // Initialize signals
         reset = 1;
         expected_result = 0;
+        
         for (int i = 0; i < B; i++) begin
             data_i[i] = 0;
             weight_i[i] = 0;
@@ -94,8 +95,16 @@ module dp_tb;
         end
         print_arrays("Test 3", data_i, weight_i);
         
-        expected_result = calculate_expected(data_i, weight_i, expected_result);
+        // Wait for these inputs to be processed
         @(posedge clk);
+        
+        // Calculate what the result should be after the inputs were processed
+        expected_result = calculate_expected(
+            '{1, 2, 3, 4},  // The inputs we just applied
+            '{1, 1, 1, 1},  // The weights we just applied
+            0               // Previous accumulation (0 here as we started fresh)
+        );
+        
         $display("Test 3: Basic dot product, result = %d (Expected: %d)", $signed(result), $signed(expected_result));
         
         // Test 4: Dot product with negative weights
@@ -105,8 +114,15 @@ module dp_tb;
         end
         print_arrays("Test 4", data_i, weight_i);
         
-        expected_result = calculate_expected(data_i, weight_i, expected_result);
         @(posedge clk);
+        
+        // Expected is now previous result plus new calculation
+        expected_result = calculate_expected(
+            '{1, 2, 3, 4},      // The inputs we just applied
+            '{-1, -1, -1, -1},  // The weights we just applied
+            expected_result     // Previous accumulation (from Test 3)
+        );
+        
         $display("Test 4: Negative weights, result = %d (Expected: %d)", $signed(result), $signed(expected_result));
         
         // Test 5: Mixed dot product
@@ -116,8 +132,14 @@ module dp_tb;
         data_i[3] = -9;    weight_i[3] = -6;
         print_arrays("Test 5", data_i, weight_i);
         
-        expected_result = calculate_expected(data_i, weight_i, expected_result);
         @(posedge clk);
+        
+        expected_result = calculate_expected(
+            '{10, -7, 12, -9},  // The inputs we just applied
+            '{-5, 3, 4, -6},    // The weights we just applied
+            expected_result     // Previous accumulation
+        );
+        
         $display("Test 5: Mixed values, result = %d (Expected: %d)", $signed(result), $signed(expected_result));
         
         // Test 6: Accumulation over multiple cycles
@@ -127,8 +149,14 @@ module dp_tb;
         data_i[3] = 5;     weight_i[3] = 5;
         print_arrays("Test 6", data_i, weight_i);
         
-        expected_result = calculate_expected(data_i, weight_i, expected_result);
         @(posedge clk);
+        
+        expected_result = calculate_expected(
+            '{5, 5, 5, 5},    // The inputs we just applied
+            '{5, 5, 5, 5},    // The weights we just applied
+            expected_result   // Previous accumulation
+        );
+        
         $display("Test 6: Accumulation cycle 1, result = %d (Expected: %d)", $signed(result), $signed(expected_result));
         
         // Test 7: Continue accumulation
@@ -138,8 +166,14 @@ module dp_tb;
         data_i[3] = 10;    weight_i[3] = 10;
         print_arrays("Test 7", data_i, weight_i);
         
-        expected_result = calculate_expected(data_i, weight_i, expected_result);
         @(posedge clk);
+        
+        expected_result = calculate_expected(
+            '{10, 10, 10, 10},  // The inputs we just applied
+            '{10, 10, 10, 10},  // The weights we just applied
+            expected_result     // Previous accumulation
+        );
+        
         $display("Test 7: Accumulation cycle 2, result = %d (Expected: %d)", $signed(result), $signed(expected_result));
         
         // Test 8: Check systolic pass-through
@@ -149,9 +183,15 @@ module dp_tb;
         data_i[3] = 23;    weight_i[3] = 33;
         print_arrays("Test 8", data_i, weight_i);
         
-        expected_result = calculate_expected(data_i, weight_i, expected_result);
         @(posedge clk);
         
+        expected_result = calculate_expected(
+            '{20, 21, 22, 23},  // The inputs we just applied
+            '{30, 31, 32, 33},  // The weights we just applied
+            expected_result     // Previous accumulation
+        );
+        
+        // Check pass-through outputs
         $write("Test 8: Systolic pass-through data = [");
         for (int i = 0; i < B; i++) begin
             $write("%d", $signed(data_v_o[i]));
@@ -168,8 +208,10 @@ module dp_tb;
         
         // Test 9: Reset again
         reset = 1;
-        expected_result = 0;
         @(posedge clk);
+        
+        expected_result = 0;  // Reset makes the expected value 0
+        
         $display("Test 9: Reset active, result = %d (Expected: %d)", $signed(result), $signed(expected_result));
         
         // Test 10: Check the boundary values
@@ -180,9 +222,20 @@ module dp_tb;
         data_i[3] = -128;  weight_i[3] = 127;
         print_arrays("Test 10", data_i, weight_i);
         
-        expected_result = calculate_expected(data_i, weight_i, expected_result);
         @(posedge clk);
+        
+        expected_result = calculate_expected(
+            '{127, -128, 127, -128},   // The inputs we just applied
+            '{127, -128, -128, 127},   // The weights we just applied
+            expected_result           // Previous accumulation (0 after reset)
+        );
+        
         $display("Test 10: Boundary values, result = %d (Expected: %d)", $signed(result), $signed(expected_result));
+		          
+		  @(posedge clk);
+		  @(posedge clk);
+		  @(posedge clk);
+		  @(posedge clk);
         
         $finish;
     end
