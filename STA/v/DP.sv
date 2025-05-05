@@ -67,6 +67,15 @@ module DP #(
             data_v_o   <= '0;
             weight_h_o <= '0;
             result_reg <= '0;
+
+            /* Added for testbenching I needed this for simulation to run - Keith
+            // Reset registers to zero - properly reset unpacked arrays element-by-element
+            for (int j = 0; j < B; j = j + 1) begin
+                data_v_o[j]   <= '0;
+                weight_h_o[j] <= '0;
+            end
+            result_reg <= '0;
+            */
         end else begin
             // Pass inputs to outputs (systolic movement)
             data_v_o   <= data_i;
@@ -74,6 +83,18 @@ module DP #(
 
             // Accumulate the sum of products calculated in this cycle
             result_reg <= result_reg + sum_of_products_comb;
+
+            /* Added for tb - Keith
+            // Pass inputs to outputs (systolic movement)
+            // Handle array assignments element-by-element
+            for (int j = 0; j < B; j = j + 1) begin
+                data_v_o[j]   <= data_i[j];
+                weight_h_o[j] <= weight_i[j];
+            end
+
+            // Accumulate the sum of products calculated in this cycle
+            result_reg <= result_reg + sum_of_products_comb;
+            */
         end
     end
 
