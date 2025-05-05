@@ -2,7 +2,7 @@
 // EE 526
 
 // Testbench for the PE (Processing Element) module
-module pe_tb;
+module PE_tb;
     // Define parameters
     localparam int B = 4;                   // Number of parallel multipliers per DP
     localparam int A = 2;                   // Rows of DPs within PE
