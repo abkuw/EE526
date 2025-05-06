@@ -1,8 +1,8 @@
 # Main hammer config file
 
 # Set top levels
-synthesis.inputs.top_module: "five_number_adder_signed_8bit"
-sim.inputs.tb_name: "five_number_adder_signed_8bit_tb"
+synthesis.inputs.top_module: "STA"
+sim.inputs.tb_name: "STA_tb" # Testbench name
 
 # Don't synthesize these gate-level netlist modules
 synthesis.inputs.preserve_modules: []

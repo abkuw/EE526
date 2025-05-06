@@ -1,88 +1,84 @@
-// File: STA.sv
-// STA Module (Compatible with Hardcoded 2x2 PE using 1D ports)
-`include "v/PE.sv" // Assumes PE.sv is the version compatible with pe_tb
-
 // Systolic Tensor Array (STA) Module - M x N grid of PEs
 module STA #(
     parameter N = 32, // Number of PE columns
     parameter M = 32, // Number of PE rows
-    // Parameters passed down to the PE module
-    parameter B = 4,
-    // A and C are implicitly 2 for the hardcoded PE, so not needed here
-    parameter QUANTIZED_WIDTH = 8 // Consistent parameter name
+    parameter B = 4,  // Multipliers per DP
+    parameter C = 2,  // Columns of DPs in PE
+    parameter A = 2,  // Rows of DPs in PE
+    parameter QUANTIZED_WIDTH = 8
 )(
     input logic clk_i,
     input logic reset_i,
-
-    // STA Inputs: Need to match the structure expected by the PE inputs
-    // Data input for N columns. Each PE takes [2*B-1:0] vectors.
-    input logic signed [QUANTIZED_WIDTH-1:0] data_i   [N-1:0][2*B-1:0],
-    // Weight input for M rows. Each PE takes [2*B-1:0] vectors.
-    input logic signed [QUANTIZED_WIDTH-1:0] weights_i[M-1:0][2*B-1:0],
-
-    // STA Outputs: Need to match the structure provided by the PE outputs
-    // Data output from N columns. Each PE provides [2*B-1:0] vectors.
-    output logic signed [QUANTIZED_WIDTH-1:0] data_o   [N-1:0][2*B-1:0],
-    // Weight output from M rows. Each PE provides [2*B-1:0] vectors.
-    output logic signed [QUANTIZED_WIDTH-1:0] weights_o[M-1:0][2*B-1:0]
+    input logic signed [QUANTIZED_WIDTH-1:0] data_i[N-1:0][C-1:0][B-1:0],
+    input logic signed [QUANTIZED_WIDTH-1:0] weights_i[M-1:0][A-1:0][B-1:0],
+    output logic signed [QUANTIZED_WIDTH-1:0] data_o[N-1:0][C-1:0][B-1:0],
+    output logic signed [QUANTIZED_WIDTH-1:0] weights_o[M-1:0][A-1:0][B-1:0],
+    output logic signed [16*QUANTIZED_WIDTH-1:0] result_o[M-1:0][N-1:0]
 );
+    // 1D flattened arrays for PE connections
+    logic signed [QUANTIZED_WIDTH-1:0] pe_data_in[M:0][N-1:0][B*C-1:0];
+    logic signed [QUANTIZED_WIDTH-1:0] pe_weight_in[M-1:0][N:0][B*A-1:0];
+    logic signed [QUANTIZED_WIDTH-1:0] pe_results[M-1:0][N-1:0]
 
-    // --- Define Type for PE Port Compatibility ---
-    // Type matching the 1D unpacked array ports of the hardcoded PE
-    typedef logic signed [QUANTIZED_WIDTH-1:0] pe_port_array_t [2*B-1:0];
-
-    // --- Internal Signal Arrays for Inter-PE Connections ---
-    // Use the defined type for signals connecting PEs
-    // data_signals connects PE outputs vertically. data_signals[i][j] is output from PE[i-1][j] and input to PE[i][j].
-    pe_port_array_t data_signals   [M:0][N-1:0];
-    // weights_signals connects PE outputs horizontally. weights_signals[i][j] is output from PE[i][j-1] and input to PE[i][j].
-    pe_port_array_t weights_signals[M-1:0][N:0];
-
-
-    // --- Generate the MxN Grid of PEs ---
-    genvar i, j; // Row (M) and Column (N) iterators
-
+    // Generate block for PE grid
+    genvar i, j, c, a, b;
     generate
-        // --- Connect STA Inputs to the Grid Edges ---
-        // Connect STA data inputs to the top edge (input to row 0 PEs)
-        for (j = 0; j < N; j = j + 1) begin : sta_data_input_connect
-            assign data_signals[0][j] = data_i[j];
-        end
-        // Connect STA weight inputs to the left edge (input to column 0 PEs)
-        for (i = 0; i < M; i = i + 1) begin : sta_weight_input_connect
-            assign weights_signals[i][0] = weights_i[i];
+        // Flatten input data for top row
+        for (j = 0; j < N; j++) begin : data_flatten
+            for (c = 0; c < C; c++) begin : data_flatten_c
+                for (b = 0; b < B; b++) begin : data_flatten_b
+                    assign pe_data_in[0][j][c*B + b] = data_i[j][c][b];
+                end
+            end
         end
 
-        // --- Instantiate the MxN PE Grid ---
-        for (i = 0; i < M; i = i + 1) begin : row_gen
-            for (j = 0; j < N; j = j + 1) begin : col_gen
-                // Instantiate PE[i][j] - A and C parameters removed/implicit
+        // Flatten input weights for leftmost column
+        for (i = 0; i < M; i++) begin : weight_flatten
+            for (a = 0; a < A; a++) begin : weight_flatten_a
+                for (b = 0; b < B; b++) begin : weight_flatten_b
+                    assign pe_weight_in[i][0][a*B + b] = weights_i[i][a][b];
+                end
+            end
+        end
+
+        // PE grid instantiation
+        for (i = 0; i < M; i++) begin : row_gen
+            for (j = 0; j < N; j++) begin : col_gen
                 PE #(
                     .B(B),
+                    .C(C),
+                    .A(A),
                     .QUANTIZED_WIDTH(QUANTIZED_WIDTH)
-                    // A=2, C=2 are implicit in the PE design
                 ) pe_inst (
-                    .clk_i      (clk_i),
-                    .reset_i    (reset_i),
-                    // Connect the compatible 1D array type signals
-                    .data_i     (data_signals[i][j]),
-                    .weights_i  (weights_signals[i][j]),
-                    .data_o     (data_signals[i+1][j]),
-                    .weights_o  (weights_signals[i][j+1])
+                    .clk_i(clk_i),
+                    .reset_i(reset_i),
+                    .data_i(pe_data_in[i][j]),
+                    .weights_i(pe_weight_in[i][j]),
+                    .data_o(pe_data_in[i+1][j]),
+                    .weights_o(pe_weight_in[i][j+1]),
+                    .result_o(pe_results[i][j])
                 );
             end
         end
 
-        // --- Connect Grid Edges to STA Outputs ---
-        // Connect the bottom edge data signals to the STA data output
-        for (j = 0; j < N; j = j + 1) begin : sta_data_output_connect
-            assign data_o[j] = data_signals[M][j];
-        end
-        // Connect the right edge weight signals to the STA weight output
-        for (i = 0; i < M; i = i + 1) begin : sta_weight_output_connect
-            assign weights_o[i] = weights_signals[i][N];
+        // Unflatten output data from bottom row
+        for (j = 0; j < N; j++) begin : data_unflatten
+            for (c = 0; c < C; c++) begin : data_unflatten_c
+                for (b = 0; b < B; b++) begin : data_unflatten_b
+                    assign data_o[j][c][b] = pe_data_in[M][j][c*B + b];
+                end
+            end
         end
 
-    endgenerate // End of main generate block
+        // Unflatten output weights from rightmost column
+        for (i = 0; i < M; i++) begin : weight_unflatten
+            for (a = 0; a < A; a++) begin : weight_unflatten_a
+                for (b = 0; b < B; b++) begin : weight_unflatten_b
+                    assign weights_o[i][a][b] = pe_weight_in[i][N][a*B + b];
+                end
+            end
+        end
+    endgenerate
 
+    assign result_o = pe_results; // Assign results from PE grid to output
 endmodule

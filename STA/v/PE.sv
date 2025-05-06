@@ -42,7 +42,8 @@ module PE #(
 
     // PE Outputs: 1D unpacked arrays matching inputs
     output logic signed [QUANTIZED_WIDTH-1:0] data_o   [2*B-1:0],
-    output logic signed [QUANTIZED_WIDTH-1:0] weights_o[2*B-1:0]
+    output logic signed [QUANTIZED_WIDTH-1:0] weights_o[2*B-1:0],
+    output logic signed [QUANTIZED_WIDTH-1:0] result_o[2*B-1:0] // Optional output for results
 );
 
     // --- Derived Parameters ---
@@ -134,5 +135,7 @@ module PE #(
         .i(dp4_data_v_o),         // Input from DP4 data output
         .o(data_o[B +: B])        // Output directly to second half of data_o
     );
+
+    assign result_o = {resultdp1, resultdp2, resultdp3, resultdp4}; // Optional output for results
 
 endmodule
