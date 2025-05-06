@@ -1,7 +1,7 @@
 // Systolic Tensor Array (STA) Module - M x N grid of PEs
 module STA #(
-    parameter N = 32, // Number of PE columns
-    parameter M = 32, // Number of PE rows
+    parameter N = 4, // Number of PE columns should be 32 x 32 but downsized for compilation times
+    parameter M = 4, // Number of PE rows
     parameter B = 4,  // Multipliers per DP
     parameter C = 2,  // Columns of DPs in PE
     parameter A = 2,  // Rows of DPs in PE
@@ -13,15 +13,15 @@ module STA #(
     input logic signed [QUANTIZED_WIDTH-1:0] weights_i[M-1:0][A-1:0][B-1:0],
     output logic signed [QUANTIZED_WIDTH-1:0] data_o[N-1:0][C-1:0][B-1:0],
     output logic signed [QUANTIZED_WIDTH-1:0] weights_o[M-1:0][A-1:0][B-1:0],
-    output logic signed [16*QUANTIZED_WIDTH-1:0] result_o[M-1:0][N-1:0]
+    output logic signed [QUANTIZED_WIDTH-1:0] result_o[M-1:0][N-1:0][2*B-1:0]  // Changed to match PE's result_o type
 );
     // 1D flattened arrays for PE connections
     logic signed [QUANTIZED_WIDTH-1:0] pe_data_in[M:0][N-1:0][B*C-1:0];
     logic signed [QUANTIZED_WIDTH-1:0] pe_weight_in[M-1:0][N:0][B*A-1:0];
-    logic signed [QUANTIZED_WIDTH-1:0] pe_results[M-1:0][N-1:0]
+    logic signed [QUANTIZED_WIDTH-1:0] pe_results[M-1:0][N-1:0][2*B-1:0]; // Changed to match PE's result_o type
 
     // Generate block for PE grid
-    genvar i, j, c, a, b;
+    genvar i, j, c, a, b, r;
     generate
         // Flatten input data for top row
         for (j = 0; j < N; j++) begin : data_flatten
@@ -78,7 +78,14 @@ module STA #(
                 end
             end
         end
-    endgenerate
 
-    assign result_o = pe_results; // Assign results from PE grid to output
+        // Connect PE results to output result array
+        for (i = 0; i < M; i++) begin : result_connect_row
+            for (j = 0; j < N; j++) begin : result_connect_col
+                for (r = 0; r < 2*B; r++) begin : result_connect_elem
+                    assign result_o[i][j][r] = pe_results[i][j][r];
+                end
+            end
+        end
+    endgenerate
 endmodule
