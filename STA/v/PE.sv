@@ -1,7 +1,8 @@
-// Assuming DP.sv contains the corrected DP module (e.g., dp_module_final_v1)
-// `include "v/DP.sv"
+// File: PE.sv
+// PE Module (Hardcoded 2x2 with Type-Parameterized Buffer and Corrected Concatenated Result Output)
+`include "v/DP.sv" // Assumes DP.sv is available (dp_module_final_v1)
 
-// Define a simple registered buffer module locally, parameterized by TYPE
+// Define buffer locally within PE file or include separately
 module SimpleTypeParameterizedBuffer #(
     // Parameterize by the data type the buffer should handle
     // Default type matches dp_vector_array_t structure for B=4, QW=8
@@ -43,7 +44,8 @@ module PE #(
     // PE Outputs: 1D unpacked arrays matching inputs
     output logic signed [QUANTIZED_WIDTH-1:0] data_o   [2*B-1:0],
     output logic signed [QUANTIZED_WIDTH-1:0] weights_o[2*B-1:0],
-    output logic signed [QUANTIZED_WIDTH-1:0] result_o[2*B-1:0] // Optional output for results
+    // CORRECTED Result Output: Single packed vector, concatenation of all 4 DP results
+    output logic signed [4*(4*QUANTIZED_WIDTH)-1:0] result_o // Width is 4 * ACCUMULATOR_WIDTH
 );
 
     // --- Derived Parameters ---
@@ -65,7 +67,7 @@ module PE #(
     dp_vector_array_t dp4_data_v_o;   // Data passed down from DP4 (to PE output buffer)
     dp_vector_array_t dp4_weight_h_o; // Weight passed right from DP4 (to PE output buffer)
 
-    // DP accumulator results (Correct type, although unused locally)
+    // DP accumulator results (Correct type)
     logic signed [ACCUMULATOR_WIDTH-1:0] resultdp1, resultdp2, resultdp3, resultdp4;
 
     // --- DP Instantiations (Hardcoded 2x2 Structure) ---
@@ -136,6 +138,8 @@ module PE #(
         .o(data_o[B +: B])        // Output directly to second half of data_o
     );
 
-    assign result_o = {resultdp1, resultdp2, resultdp3, resultdp4}; // Optional output for results
+    // --- Assign Result Output ---
+    // Concatenate the results from all four DPs
+    assign result_o = {resultdp1, resultdp2, resultdp3, resultdp4};
 
 endmodule

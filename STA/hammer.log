@@ -159,3 +159,761 @@
 [tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
 [tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
 [tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.WARNING: No SRAM parameters specified, no SRAMs will be generated.
+[<global>] Level.INFO: Starting SRAM Generator with tool 'fakeram'
+[sram_generator] Level.DEBUG: Running sub-step 'run_fakeram_generator'
+[sram_generator] Level.WARNING: No valid configs, no SRAMs were generated
+[sram_generator] Level.DEBUG: Running sub-step 'generate_all_gds'
+[sram_generator] Level.INFO: SRAM GDS generation disabled (only LEF view available)
+[sram_generator] Level.DEBUG: Running sub-step 'register_macros'
+[sram_generator] Level.DEBUG: Running sub-step 'fakeram_gen_macro_swaps'
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Starting synthesis with tool 'genus'
+[synthesis] Level.DEBUG: Running persistent sub-step 'genus_global_settings' before 'init_environment'
+[synthesis] Level.DEBUG: Running sub-step 'init_environment'
+[tech] Level.WARNING: Lib {"lef file": "tech-sky130-cache/sky130_fd_sc_hd__nom.tlef", "klayout techfile": "tech-sky130-cache/sky130A.lyt", "spice file": "$SKY130_NDA/s8/V2.0.1/LVS/Calibre/source.cdl", "provides": [{"lib_type": "technology"}], "verilog sim": "tech-sky130-cache/primitives.v"} has no supplies annotation! Using anyway.
+[tech] Level.WARNING: Lib {"lef file": "tech-sky130-cache/sky130_fd_sc_hd__nom.tlef", "klayout techfile": "tech-sky130-cache/sky130A.lyt", "spice file": "$SKY130_NDA/s8/V2.0.1/LVS/Calibre/source.cdl", "provides": [{"lib_type": "technology"}], "verilog sim": "tech-sky130-cache/primitives.v"} has no supplies annotation! Using anyway.
+[tech] Level.WARNING: Lib {"lef file": "tech-sky130-cache/sky130_fd_sc_hd__nom.tlef", "klayout techfile": "tech-sky130-cache/sky130A.lyt", "spice file": "$SKY130_NDA/s8/V2.0.1/LVS/Calibre/source.cdl", "provides": [{"lib_type": "technology"}], "verilog sim": "tech-sky130-cache/primitives.v"} has no supplies annotation! Using anyway.
+[tech] Level.WARNING: Lib {"lef file": "tech-sky130-cache/sky130_fd_sc_hd__nom.tlef", "klayout techfile": "tech-sky130-cache/sky130A.lyt", "spice file": "$SKY130_NDA/s8/V2.0.1/LVS/Calibre/source.cdl", "provides": [{"lib_type": "technology"}], "verilog sim": "tech-sky130-cache/primitives.v"} has no supplies annotation! Using anyway.
+[tech] Level.WARNING: Lib {"lef file": "tech-sky130-cache/sky130_fd_sc_hd__nom.tlef", "klayout techfile": "tech-sky130-cache/sky130A.lyt", "spice file": "$SKY130_NDA/s8/V2.0.1/LVS/Calibre/source.cdl", "provides": [{"lib_type": "technology"}], "verilog sim": "tech-sky130-cache/primitives.v"} has no supplies annotation! Using anyway.
+[tech] Level.WARNING: Lib {"lef file": "tech-sky130-cache/sky130_fd_sc_hd__nom.tlef", "klayout techfile": "tech-sky130-cache/sky130A.lyt", "spice file": "$SKY130_NDA/s8/V2.0.1/LVS/Calibre/source.cdl", "provides": [{"lib_type": "technology"}], "verilog sim": "tech-sky130-cache/primitives.v"} has no supplies annotation! Using anyway.
+[tech] Level.WARNING: Lib {"lef file": "tech-sky130-cache/sky130_fd_sc_hd__nom.tlef", "klayout techfile": "tech-sky130-cache/sky130A.lyt", "spice file": "$SKY130_NDA/s8/V2.0.1/LVS/Calibre/source.cdl", "provides": [{"lib_type": "technology"}], "verilog sim": "tech-sky130-cache/primitives.v"} has no supplies annotation! Using anyway.
+[tech] Level.WARNING: Lib {"lef file": "tech-sky130-cache/sky130_fd_sc_hd__nom.tlef", "klayout techfile": "tech-sky130-cache/sky130A.lyt", "spice file": "$SKY130_NDA/s8/V2.0.1/LVS/Calibre/source.cdl", "provides": [{"lib_type": "technology"}], "verilog sim": "tech-sky130-cache/primitives.v"} has no supplies annotation! Using anyway.
+[synthesis] Level.DEBUG: Running sub-step 'genus_syn_with_preserve'
+[synthesis] Level.DEBUG: Running sub-step 'genus_maybe_syn_map'
+[synthesis] Level.DEBUG: Running sub-step 'add_tieoffs'
+[synthesis] Level.DEBUG: Running sub-step 'write_regs'
+[synthesis] Level.DEBUG: Running sub-step 'generate_reports'
+[synthesis] Level.DEBUG: Running sub-step 'write_outputs'
+[synthesis] Level.DEBUG: Executing subprocess: /home/projects/ee477.2025wtr/cad/cadence/GENUS/GENUS211/bin/genus -f /home/akumar08/EE526/STA/build/syn-rundir/syn.tcl -no_gui
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 2025/05/06 13:41:14 WARNING This OS does not appear to be a Cadence supported Linux configuration.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 2025/05/06 13:41:14 For more info, please run CheckSysConf in <cdsRoot/tools.lnx86/bin/checkSysConf <productId>
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: TMPDIR is being set to /tmp/genus_temp_3232592_linux-lab-075.ece.uw.edu_akumar08_bDgcSi
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Cadence Genus(TM) Synthesis Solution.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: of Cadence Design Systems, Inc. in the United States and other countries.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: [13:41:23.233841] Configured Lic search path (20.02-s004): 27006@cadencels.s.uw.edu
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Version: 21.12-s068_1, built Fri Mar 04 14:12:46 PST 2022
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Options: -files /home/akumar08/EE526/STA/build/syn-rundir/syn.tcl -no_gui
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Date:    Tue May 06 13:41:23 2025
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Host:    linux-lab-075.ece.uw.edu (x86_64 w/Linux 4.18.0-553.46.1.el8_10.x86_64) (8cores*8cpus*1physical cpu*Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz 12288KB) (15962860KB)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: PID:     3232592
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: OS:      AlmaLinux release 8.10 (Cerulean Leopard)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: [13:41:23.435443] Periodic Lic check successful
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: [13:41:23.435450] Feature usage summary:
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: [13:41:23.435450] Genus_Synthesis
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Checking out license: Genus_Synthesis
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: ***********************************************************************************************************
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: ***********************************************************************************************************
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Loading tool scripts...
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Finished loading tool scripts (15 seconds elapsed).
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: #@ Processing -files option
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @genus 1> source /home/akumar08/EE526/STA/build/syn-rundir/syn.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: #@ Begin verbose source /home/akumar08/EE526/STA/build/syn-rundir/syn.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 1: puts "set_db hdl_error_on_blackbox true"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db hdl_error_on_blackbox true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 2: set_db hdl_error_on_blackbox true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'hdl_error_on_blackbox' = true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 3: puts "set_db max_cpus_per_server 8"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db max_cpus_per_server 8
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 4: set_db max_cpus_per_server 8
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'max_cpus_per_server' = 8
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 5: puts "set_db hdl_auto_sync_set_reset true"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db hdl_auto_sync_set_reset true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 6: set_db hdl_auto_sync_set_reset true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'hdl_auto_sync_set_reset' = true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 7: puts "set_db hdl_unconnected_value none"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db hdl_unconnected_value none
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 8: set_db hdl_unconnected_value none
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'hdl_unconnected_value' = none
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 9: puts "set_db lp_clock_gating_infer_enable  true"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db lp_clock_gating_infer_enable  true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 10: set_db lp_clock_gating_infer_enable  true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'lp_clock_gating_infer_enable' = true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 11: puts "set_db lp_clock_gating_prefix  {CLKGATE}"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db lp_clock_gating_prefix  {CLKGATE}
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 12: set_db lp_clock_gating_prefix  {CLKGATE}
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'lp_clock_gating_prefix' = CLKGATE
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 13: puts "set_db lp_insert_clock_gating  true"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db lp_insert_clock_gating  true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 14: set_db lp_insert_clock_gating  true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'lp_insert_clock_gating' = true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 15: puts "set_db lp_clock_gating_hierarchical true"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db lp_clock_gating_hierarchical true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 16: set_db lp_clock_gating_hierarchical true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : This attribute will be obsolete in a next major release. [TUI-32]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : attribute: 'lp_clock_gating_hierarchical', object type: 'root'
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Hierarchical clock-gating is no longer supported. When you use the lp_clock_gating_hierarchical attribute in this release, the tool will ignore the attribute.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'lp_clock_gating_hierarchical' = true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 17: puts "set_db lp_insert_clock_gating_incremental true"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db lp_insert_clock_gating_incremental true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 18: set_db lp_insert_clock_gating_incremental true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : This attribute will be obsolete in a next major release. [TUI-32]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : attribute: 'lp_insert_clock_gating_incremental', object type: 'root'
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The attribute 'lp_insert_clock_gating_incremental' is obsoleted.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'lp_insert_clock_gating_incremental' = true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 19: puts "set_db lp_clock_gating_register_aware true"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_db lp_clock_gating_register_aware true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 20: set_db lp_clock_gating_register_aware true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'lp_clock_gating_register_aware' = true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 21: puts "read_mmmc /home/akumar08/EE526/STA/build/syn-rundir/mmmc.tcl"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: read_mmmc /home/akumar08/EE526/STA/build/syn-rundir/mmmc.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 22: read_mmmc /home/akumar08/EE526/STA/build/syn-rundir/mmmc.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Setting attribute of root '/': 'is_read_mmmc_flow' = true
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Sourcing '/home/akumar08/EE526/STA/build/syn-rundir/mmmc.tcl' (Tue May 06 13:41:39 PDT 2025)...
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: #@ Begin verbose source /home/akumar08/EE526/STA/build/syn-rundir/mmmc.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 1: puts "create_constraint_mode -name my_constraint_mode -sdc_files [list /home/akumar08/EE526/STA/build/syn-rundir/clock_constraints_fragment.sdc /home/akumar08/EE526/STA/build/syn-rundir/pin_constraints_fragment.sdc /home/akumar08/EE526/STA/cfg/constraints.tcl]"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_constraint_mode -name my_constraint_mode -sdc_files /home/akumar08/EE526/STA/build/syn-rundir/clock_constraints_fragment.sdc /home/akumar08/EE526/STA/build/syn-rundir/pin_constraints_fragment.sdc /home/akumar08/EE526/STA/cfg/constraints.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 2: create_constraint_mode -name my_constraint_mode -sdc_files [list /home/akumar08/EE526/STA/build/syn-rundir/clock_constraints_fragment.sdc /home/akumar08/EE526/STA/build/syn-rundir/pin_constraints_fragment.sdc /home/akumar08/EE526/STA/cfg/constraints.tcl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 3: puts "create_library_set -name ss_100C_1v60.setup_set -timing [list /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib]"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_library_set -name ss_100C_1v60.setup_set -timing /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 4: create_library_set -name ss_100C_1v60.setup_set -timing [list /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 5: puts "create_timing_condition -name ss_100C_1v60.setup_cond -library_sets [list ss_100C_1v60.setup_set]"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_timing_condition -name ss_100C_1v60.setup_cond -library_sets ss_100C_1v60.setup_set
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 6: create_timing_condition -name ss_100C_1v60.setup_cond -library_sets [list ss_100C_1v60.setup_set]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 7: puts "create_rc_corner -name ss_100C_1v60.setup_rc -temperature 100.0  "
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_rc_corner -name ss_100C_1v60.setup_rc -temperature 100.0
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 8: create_rc_corner -name ss_100C_1v60.setup_rc -temperature 100.0
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 9: puts "create_delay_corner -name ss_100C_1v60.setup_delay -timing_condition ss_100C_1v60.setup_cond -rc_corner ss_100C_1v60.setup_rc"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_delay_corner -name ss_100C_1v60.setup_delay -timing_condition ss_100C_1v60.setup_cond -rc_corner ss_100C_1v60.setup_rc
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 10: create_delay_corner -name ss_100C_1v60.setup_delay -timing_condition ss_100C_1v60.setup_cond -rc_corner ss_100C_1v60.setup_rc
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 11: puts "create_analysis_view -name ss_100C_1v60.setup_view -delay_corner ss_100C_1v60.setup_delay -constraint_mode my_constraint_mode"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_analysis_view -name ss_100C_1v60.setup_view -delay_corner ss_100C_1v60.setup_delay -constraint_mode my_constraint_mode
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 12: create_analysis_view -name ss_100C_1v60.setup_view -delay_corner ss_100C_1v60.setup_delay -constraint_mode my_constraint_mode
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 13: puts "create_library_set -name ff_n40C_1v95.hold_set -timing [list /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95_ccsnoise.lib]"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_library_set -name ff_n40C_1v95.hold_set -timing /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95_ccsnoise.lib
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 14: create_library_set -name ff_n40C_1v95.hold_set -timing [list /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95_ccsnoise.lib]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 15: puts "create_timing_condition -name ff_n40C_1v95.hold_cond -library_sets [list ff_n40C_1v95.hold_set]"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_timing_condition -name ff_n40C_1v95.hold_cond -library_sets ff_n40C_1v95.hold_set
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 16: create_timing_condition -name ff_n40C_1v95.hold_cond -library_sets [list ff_n40C_1v95.hold_set]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 17: puts "create_rc_corner -name ff_n40C_1v95.hold_rc -temperature -40.0  "
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_rc_corner -name ff_n40C_1v95.hold_rc -temperature -40.0
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 18: create_rc_corner -name ff_n40C_1v95.hold_rc -temperature -40.0
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 19: puts "create_delay_corner -name ff_n40C_1v95.hold_delay -timing_condition ff_n40C_1v95.hold_cond -rc_corner ff_n40C_1v95.hold_rc"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_delay_corner -name ff_n40C_1v95.hold_delay -timing_condition ff_n40C_1v95.hold_cond -rc_corner ff_n40C_1v95.hold_rc
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 20: create_delay_corner -name ff_n40C_1v95.hold_delay -timing_condition ff_n40C_1v95.hold_cond -rc_corner ff_n40C_1v95.hold_rc
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 21: puts "create_analysis_view -name ff_n40C_1v95.hold_view -delay_corner ff_n40C_1v95.hold_delay -constraint_mode my_constraint_mode"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_analysis_view -name ff_n40C_1v95.hold_view -delay_corner ff_n40C_1v95.hold_delay -constraint_mode my_constraint_mode
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 22: create_analysis_view -name ff_n40C_1v95.hold_view -delay_corner ff_n40C_1v95.hold_delay -constraint_mode my_constraint_mode
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 23: puts "create_library_set -name tt_025C_1v80.extra_set -timing [list /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib]"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_library_set -name tt_025C_1v80.extra_set -timing /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 24: create_library_set -name tt_025C_1v80.extra_set -timing [list /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 25: puts "create_timing_condition -name tt_025C_1v80.extra_cond -library_sets [list tt_025C_1v80.extra_set]"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_timing_condition -name tt_025C_1v80.extra_cond -library_sets tt_025C_1v80.extra_set
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 26: create_timing_condition -name tt_025C_1v80.extra_cond -library_sets [list tt_025C_1v80.extra_set]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 27: puts "create_rc_corner -name tt_025C_1v80.extra_rc -temperature 25.0  "
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_rc_corner -name tt_025C_1v80.extra_rc -temperature 25.0
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 28: create_rc_corner -name tt_025C_1v80.extra_rc -temperature 25.0
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 29: puts "create_delay_corner -name tt_025C_1v80.extra_delay -timing_condition tt_025C_1v80.extra_cond -rc_corner tt_025C_1v80.extra_rc"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_delay_corner -name tt_025C_1v80.extra_delay -timing_condition tt_025C_1v80.extra_cond -rc_corner tt_025C_1v80.extra_rc
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 30: create_delay_corner -name tt_025C_1v80.extra_delay -timing_condition tt_025C_1v80.extra_cond -rc_corner tt_025C_1v80.extra_rc
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 31: puts "create_analysis_view -name tt_025C_1v80.extra_view -delay_corner tt_025C_1v80.extra_delay -constraint_mode my_constraint_mode"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: create_analysis_view -name tt_025C_1v80.extra_view -delay_corner tt_025C_1v80.extra_delay -constraint_mode my_constraint_mode
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 32: create_analysis_view -name tt_025C_1v80.extra_view -delay_corner tt_025C_1v80.extra_delay -constraint_mode my_constraint_mode
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 33: puts "set_analysis_view -setup { ss_100C_1v60.setup_view } -hold { ff_n40C_1v95.hold_view tt_025C_1v80.extra_view }"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: set_analysis_view -setup { ss_100C_1v60.setup_view } -hold { ff_n40C_1v95.hold_view tt_025C_1v80.extra_view }
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(mmmc.tcl) 34: set_analysis_view -setup { ss_100C_1v60.setup_view } -hold { ff_n40C_1v95.hold_view tt_025C_1v80.extra_view }
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Threads Configured:3
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Message Summary for Library sky130_fd_sc_hd__ss_100C_1v60.lib:
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   **************************************************************
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Missing pg_pin group in the library. [LBR-702]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : No pg_pin with name 'VNB' has been read in the cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1'. The attribute 'related_bias_pin' specified for the pg_pin 'VPWR' is being ignored. (File /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib, Line 82160)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Missing pg_pin group in the library. [LBR-702]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : No pg_pin with name 'VNB' has been read in the cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2'. The attribute 'related_bias_pin' specified for the pg_pin 'VPWR' is being ignored. (File /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib, Line 82294)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Missing pg_pin group in the library. [LBR-702]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : No pg_pin with name 'VNB' has been read in the cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4'. The attribute 'related_bias_pin' specified for the pg_pin 'VPWR' is being ignored. (File /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib, Line 82428)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Missing pg_pin group in the library. [LBR-702]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : No pg_pin with name 'VNB' has been read in the cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1'. The attribute 'related_bias_pin' specified for the pg_pin 'VPWR' is being ignored. (File /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib, Line 82705)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Missing pg_pin group in the library. [LBR-702]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : No pg_pin with name 'VNB' has been read in the cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2'. The attribute 'related_bias_pin' specified for the pg_pin 'VPWR' is being ignored. (File /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib, Line 82839)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Missing pg_pin group in the library. [LBR-702]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : No pg_pin with name 'VNB' has been read in the cell 'sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4'. The attribute 'related_bias_pin' specified for the pg_pin 'VPWR' is being ignored. (File /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib, Line 82973)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Missing pg_pin group in the library. [LBR-702]: 6
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   An unsupported construct was detected in this library. [LBR-40]: 12
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   **************************************************************
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Created nominal operating condition. [LBR-412]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.600000, 100.000000) in library 'sky130_fd_sc_hd__ss_100C_1v60.lib'.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell has no output pins defined. [LBR-9]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_4' must have an output pin.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Maximum message print count reached. [MESG-11]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Maximum print count of '20' reached for message 'LBR-9'.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Set default library domain. [LBR-109]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The default library domain is 'library_domain:ss_100C_1v60.setup_cond'.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: #@ End verbose source /home/akumar08/EE526/STA/build/syn-rundir/mmmc.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 23: puts "read_physical -lef { /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef }"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: read_physical -lef { /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef }
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 24: read_physical -lef { /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef }
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'L1M1_PR' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : If this is the expected behavior, this message can be ignored.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'L1M1_PR_R' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'L1M1_PR_M' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'L1M1_PR_MR' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'L1M1_PR_C' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M1M2_PR' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M1M2_PR_R' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M1M2_PR_M' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M1M2_PR_MR' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M1M2_PR_C' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M2M3_PR' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M2M3_PR_R' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M2M3_PR_M' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M2M3_PR_MR' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M2M3_PR_C' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M3M4_PR' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M3M4_PR_R' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M3M4_PR_M' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M3M4_PR_MR' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Via 'M3M4_PR_C' has no resistance value.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Maximum message print count reached. [MESG-11]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Maximum print count of '20' reached for message 'PHYS-129'.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Multiple ports are found on a pin without MUSTJOINALLPORTS in the pin property in the LEF file. [PHYS-2381]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Multiple ports are found on pin 'X' on cell 'sky130_fd_sc_hd__probe_p_8' without MUSTJOINALLPORTS in the pin property.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : This means that only one port would be connected, which may not be the expected behavior. Should consider adding MUSTJOINALLPORTS property.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Multiple ports are found on a pin without MUSTJOINALLPORTS in the pin property in the LEF file. [PHYS-2381]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Multiple ports are found on pin 'X' on cell 'sky130_fd_sc_hd__probec_p_8' without MUSTJOINALLPORTS in the pin property.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   According to lef_library, there are total 6 routing layers [ V(3) / H(3) ]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The variant range (0.14, 1.6) of 'WIDTH' for layers 'met2' and 'met5' is too large.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Check the consistency of the parameters, and see if you can ignore this message or you're using different LEF file with wrong parameters.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The variant range (0.0285, 12.8) of 'RPERSQ' for layers 'met5' and 'li1' is too large.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : The value of the wire parameter is too big. [PHYS-13]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The 'RPERSQ: 12.8' of layer 'li1' is much bigger than others.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Check the consistency of the specified wire parameter.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The variant range (0.14, 1.6) of 'MINSPACING' for layers 'met2' and 'met5' is too large.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:   Library has 335 usable logic and 62 usable sequential lib-cells.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Huge' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Non-monotonic wireload models can cause problems during synthesis and/or mapping.  Raising some of the points in the curve to give it a monotonic shape.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Huge' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Huge' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Large' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Large' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Large' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Medium' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Medium' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Medium' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Small' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Small' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Non-monotonic wireload model found. [LBR-81]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : 'Length' table in wireload model 'Small' is non-monotonic.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_ef_sc_hd__decap_12 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Ensure that the proper library files are available and have been imported.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_ef_sc_hd__fakediode_2 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_ef_sc_hd__fill_8 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_ef_sc_hd__fill_12 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a2bb2o_1' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Overriding lib value with LEF value. To use .lib as golden do: '::legacy::set_attribute use_power_ground_pin_from_lef false'.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a2bb2o_1' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a2bb2o_2' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a2bb2o_2' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a2bb2o_4' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a2bb2o_4' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a2bb2oi_1' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a2bb2oi_1' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a2bb2oi_2' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a2bb2oi_2' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a2bb2oi_4' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a2bb2oi_4' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a21bo_1' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a21bo_1' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a21bo_2' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a21bo_2' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a21bo_4' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a21bo_4' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VNB' of library cell 'sky130_fd_sc_hd__a21boi_0' is marked as GROUND in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Library cell pin 'use' attribute is inconsistent between lib and LEF. [PHYS-128]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Pin 'VPB' of library cell 'sky130_fd_sc_hd__a21boi_0' is marked as POWER in LEF file.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Maximum message print count reached. [MESG-11]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Maximum print count of '20' reached for message 'PHYS-128'.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__fill_1 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__fill_2 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__fill_4 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__fill_8 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__tap_1 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__tap_2 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__tapvgnd2_1 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__tapvgnd_1 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Physical cell not defined in library. [PHYS-279]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The physical (LEF) cell sky130_fd_sc_hd__tapvpwrvgnd_1 cannot be found in library.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 25: puts "read_hdl -sv { /home/akumar08/EE526/STA/v/STA_tb.sv /home/akumar08/basejump_stl/bsg_misc/bsg_defines.v /home/akumar08/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v /home/akumar08/basejump_stl/bsg_test/bsg_nonsynth_reset_gen.v /home/akumar08/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v /home/akumar08/EE526/STA/v/STA.sv /home/akumar08/EE526/STA/v/PE.sv /home/akumar08/EE526/STA/v/DP.sv /home/akumar08/EE526/STA/v/accumulator.sv /home/akumar08/EE526/STA/v/five_number_adder_signed_8bit.sv /home/akumar08/EE526/STA/v/adder.sv /home/akumar08/basejump_stl/bsg_misc/bsg_buf.v }"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: read_hdl -sv { /home/akumar08/EE526/STA/v/STA_tb.sv /home/akumar08/basejump_stl/bsg_misc/bsg_defines.v /home/akumar08/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v /home/akumar08/basejump_stl/bsg_test/bsg_nonsynth_reset_gen.v /home/akumar08/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v /home/akumar08/EE526/STA/v/STA.sv /home/akumar08/EE526/STA/v/PE.sv /home/akumar08/EE526/STA/v/DP.sv /home/akumar08/EE526/STA/v/accumulator.sv /home/akumar08/EE526/STA/v/five_number_adder_signed_8bit.sv /home/akumar08/EE526/STA/v/adder.sv /home/akumar08/basejump_stl/bsg_misc/bsg_buf.v }
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: @file(syn.tcl) 26: read_hdl -sv { /home/akumar08/EE526/STA/v/STA_tb.sv /home/akumar08/basejump_stl/bsg_misc/bsg_defines.v /home/akumar08/basejump_stl/bsg_test/bsg_nonsynth_clock_gen.v /home/akumar08/basejump_stl/bsg_test/bsg_nonsynth_reset_gen.v /home/akumar08/basejump_stl/bsg_fsb/bsg_fsb_node_trace_replay.v /home/akumar08/EE526/STA/v/STA.sv /home/akumar08/EE526/STA/v/PE.sv /home/akumar08/EE526/STA/v/DP.sv /home/akumar08/EE526/STA/v/accumulator.sv /home/akumar08/EE526/STA/v/five_number_adder_signed_8bit.sv /home/akumar08/EE526/STA/v/adder.sv /home/akumar08/basejump_stl/bsg_misc/bsg_buf.v }
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: `include "v/STA.sv" // Assumes STA.sv is the version with concatenated result_o port
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Cannot open file. [VLOGPT-650]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : File 'v/STA.sv' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 6, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The specified file could not be opened.  Check the value of the init_hdl_search_path attribute.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     initial begin
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:           |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Initial in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 65, column 11.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : For example, the following constructs will be ignored:
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - initial block
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - final block
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - program block
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - property block
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - sequence block
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - covergroup
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - checker block
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - gate drive strength
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - system task enable
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - reg declaration with initial value
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - specify block.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         forever #(CLK_PERIOD/2) clk = ~clk;
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                               |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable delay specifier (#<n>) mentioned in verilog file. These delay numbers are for simulation purpose only. [VLOGPT-35]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 67, column 31.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : All delay numbers assigned or used in behavioral code are for simulation purposes only and are not synthesizable. These values are ignored during synthesis. This warning is issued only once per module.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:              |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Unsupported declaration. [VLOGPT-32] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : String type in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 97, column 14.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : The following declarations are not supported for synthesis:
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - tri0
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - tri1
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - event
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - class
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - chandle
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - SV string type
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     - associative array.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Illegal use of SystemVerilog reserved word. [VLOGPT-8] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Keyword 'string' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 97, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : SystemVerilog introduces many new keywords.  They are:
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     alias           do              join_any        solve
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     always_comb     endclass        join_none       static
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     always_ff       endclocking     local           string
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     always_latch    endinterface    logic           struct
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     assert          endprogram      longint         super
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     assert_strobe   endproperty     modport         this
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     before          endsequence     new             throughout
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     bind            enum            null            timeprecision
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     bit             export          packed          timeunit
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     break           extends         priority        type
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     byte            extern          program         typedef
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     chandle         final           property        union
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     class           first_match     protected       unique
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     clocking        forkjoin        pure            unique0
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     const           iff             rand            var
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     constraint      import          randc           virtual
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     context         inside          ref             void
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     continue        int             sequence        wait_order
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     cover           interface       shortint        with
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     dist            intersect       shortreal       within
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: To use these keywords as identifiers in a design, you must read the input design with 'read_hdl -v1995' or 'read_hdl -v2001'; or use the pragma:
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     `begin_keywords "1364-1995"
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: or    `begin_keywords "1364-2001".
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Unknown type '(null)' for subprogram port 'string' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 97, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ')', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 97, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 97, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         $display("Array %s:", name);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                               |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Symbol 'name' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 100, column 31.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Verilog module is using a parameter that is not defined in the module. You will get a notification for this, if you read the verilog file using the read_hdl command.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 $write("  Col[%0d] CBlock[%0d]: [", n_idx, c_idx);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                       |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 103, column 23.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                     $write("%4d", $signed(arr[n_idx][c_idx][b_idx]));
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                           |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 105, column 27.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                     if (b_idx < B-1) $write(", ");
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                            |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 106, column 44.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 $write("]\n");
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                       |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 108, column 23.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:              |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Unsupported declaration. [VLOGPT-32] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : String type in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 115, column 14.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Illegal use of SystemVerilog reserved word. [VLOGPT-8] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Keyword 'string' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 115, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Unknown type '(null)' for subprogram port 'string' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 115, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ')', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 115, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 115, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         $display("Array %s:", name);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                               |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Symbol 'name' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 118, column 31.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 $write("  Row[%0d] ABlock[%0d]: [", m_idx, a_idx);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                       |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 121, column 23.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                     $write("%4d", $signed(arr[m_idx][a_idx][b_idx]));
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                           |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 123, column 27.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                     if (b_idx < B-1) $write(", ");
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                            |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 124, column 44.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 $write("]\n");
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                       |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 126, column 23.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:              |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Unsupported declaration. [VLOGPT-32] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : String type in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 133, column 14.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Illegal use of SystemVerilog reserved word. [VLOGPT-8] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Keyword 'string' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 133, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Unknown type '(null)' for subprogram port 'string' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 133, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ')', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 133, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         string name,
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 133, column 19.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         $display("Array %s:", name);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                               |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Symbol 'name' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 136, column 31.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 $write("  PE[%0d][%0d] Result: 0x%0h\n", m_idx, n_idx, arr[m_idx][n_idx]);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                       |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to system task '$write' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 139, column 23.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++) data_i[n][c][b] = counter++;
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                                                                                   |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Usage of unary increment or decrement operators might lead to ambiguous results. [VLOGPT-689]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 152, column 115.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++) expected_data_o[n][c][b] = counter++;
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                                                                                            |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Warning : Usage of unary increment or decrement operators might lead to ambiguous results. [VLOGPT-689]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 173, column 124.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     function automatic bit verify_outputs(string test_name, bit check_result_exact_zero = 0);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Unsupported declaration. [VLOGPT-32] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : String type in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 185, column 48.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     function automatic bit verify_outputs(string test_name, bit check_result_exact_zero = 0);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                          |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Illegal use of SystemVerilog reserved word. [VLOGPT-8] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Keyword 'string' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 185, column 58.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     function automatic bit verify_outputs(string test_name, bit check_result_exact_zero = 0);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                          |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Unknown type '(null)' for subprogram port 'string' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 185, column 58.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:     function automatic bit verify_outputs(string test_name, bit check_result_exact_zero = 0);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                           |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found ',' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 185, column 59.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         bit match = 1;
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 186, column 17.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                  |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 18.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                       |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found '<identifier>' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 23.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                              |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found '++' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 30.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                    |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Symbol 'c' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 52.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                       |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found ')' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 55.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                                            |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Symbol 'b' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 76.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                                               |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found ')' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 79.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                 match = 0; $error("%s: Data mismatch at [%0d][%0d][%0d]: Exp %d, Got %d", test_name, n,c,b, expected_data_o[n][c][b], data_o[n][c][b]);
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                                                         |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Parsing error. [VLOGPT-1] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Expecting token ';', found ',' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 189, column 89.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                               |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Unresolved subprogram reference. [VLOGPT-203] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to subprogram 'c' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 47.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Error encountered during Verilog parsing.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                 |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Unresolved subprogram reference. [VLOGPT-203] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to subprogram 'C' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 49.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                                       |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Unresolved subprogram reference. [VLOGPT-203] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to subprogram 'b' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 71.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         for (int n=0; n<N; n++) for (int c=0; c<C; c++) for (int b=0; b<B; b++)
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:                                                                         |
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Error   : Unresolved subprogram reference. [VLOGPT-203] [read_hdl]
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG:         : Call to subprogram 'B' in file '/home/akumar08/EE526/STA/v/STA_tb.sv' on line 187, column 73.
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: #@ End verbose source /home/akumar08/EE526/STA/build/syn-rundir/syn.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: 1
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: Encountered problems processing file: /home/akumar08/EE526/STA/build/syn-rundir/syn.tcl
+[synthesis] [Exec ...S211/bin/genus -f /home/akumar...] Level.DEBUG: WARNING: This version of the tool is 1158 days old.
