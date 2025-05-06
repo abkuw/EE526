@@ -1,0 +1,2 @@
+Command Line: /home/projects/ee477.2025wtr/cad/synopsys/verdi/Q-2020.03-SP2-8/platform/LINUXAMD64/bin/Novas -full64 -ssf /home/akumar08/EE526/STA/build/sim-rtl-rundir/waveform.fsdb
+uname(Linux linux-lab-075.ece.uw.edu 4.18.0-553.46.1.el8_10.x86_64 #1 SMP Fri Mar 28 10:11:49 EDT 2025 x86_64)

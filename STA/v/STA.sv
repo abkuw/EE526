@@ -1,7 +1,3 @@
-// Include the corrected PE module definition
-// Make sure the path is correct for your environment
-`include "v/PE.sv"
-
 // Systolic Tensor Array (STA) Module - M x N grid of PEs
 module STA #(
     parameter N = 4, // Number of PE columns should be 32 x 32 but downsized for compilation times
@@ -23,7 +19,7 @@ module STA #(
     logic signed [QUANTIZED_WIDTH-1:0] pe_data_in[M:0][N-1:0][B*C-1:0];
     logic signed [QUANTIZED_WIDTH-1:0] pe_weight_in[M-1:0][N:0][B*A-1:0];
     logic signed [QUANTIZED_WIDTH-1:0] pe_results[M-1:0][N-1:0][2*B-1:0]; // Changed to match PE's result_o type
-    
+
     // Generate block for PE grid
     genvar i, j, c, a, b, r;
     generate
@@ -35,7 +31,7 @@ module STA #(
                 end
             end
         end
-        
+
         // Flatten input weights for leftmost column
         for (i = 0; i < M; i++) begin : weight_flatten
             for (a = 0; a < A; a++) begin : weight_flatten_a
@@ -44,7 +40,7 @@ module STA #(
                 end
             end
         end
-        
+
         // PE grid instantiation
         for (i = 0; i < M; i++) begin : row_gen
             for (j = 0; j < N; j++) begin : col_gen
@@ -64,7 +60,7 @@ module STA #(
                 );
             end
         end
-        
+
         // Unflatten output data from bottom row
         for (j = 0; j < N; j++) begin : data_unflatten
             for (c = 0; c < C; c++) begin : data_unflatten_c
@@ -73,7 +69,7 @@ module STA #(
                 end
             end
         end
-        
+
         // Unflatten output weights from rightmost column
         for (i = 0; i < M; i++) begin : weight_unflatten
             for (a = 0; a < A; a++) begin : weight_unflatten_a
@@ -82,7 +78,7 @@ module STA #(
                 end
             end
         end
-        
+
         // Connect PE results to output result array
         for (i = 0; i < M; i++) begin : result_connect_row
             for (j = 0; j < N; j++) begin : result_connect_col

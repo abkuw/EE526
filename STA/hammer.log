@@ -1,0 +1,161 @@
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef
+[<global>] Level.INFO: Loading hammer-vlsi libraries and reading settings
+[<global>] Level.INFO: Loading technology 'sky130'
+[tech] Level.ERROR: installs  does not exist
+[tech] Level.INFO: Modifying CDL netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/cdl/sky130_fd_sc_hd.cdl -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.cdl
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd.v
+[tech] Level.INFO: Modifying Verilog netlist: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v -> /home/akumar08/EE526/STA/build/tech-sky130-cache/primitives.v
+[tech] Level.INFO: Modifying Technology LEF: /home/projects/ee477.2025wtr/cad/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef -> /home/akumar08/EE526/STA/build/tech-sky130-cache/sky130_fd_sc_hd__nom.tlef

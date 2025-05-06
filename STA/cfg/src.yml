@@ -1,7 +1,7 @@
 # List of all Verilog source files to include in this build.
 # Used by both synthesis and RTL simulation.
 synthesis.inputs.input_files: [
-  "v/tb_STA.sv",
+  "v/STA_tb.sv",
   # BSG utilities
   "${bsg_root}/bsg_misc/bsg_defines.v",
   "${bsg_root}/bsg_test/bsg_nonsynth_clock_gen.v",
