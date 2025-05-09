@@ -1,2 +1,5 @@
-bsg_root: /home/akumar08/basejump_stl
-vlsi.core.local_tool_path: /home/akumar08/ee477-hammer-cad
+#bsg_root: /home/akumar08/basejump_stl
+#vlsi.core.local_tool_path: /home/akumar08/ee477-hammer-cad
+
+bsg_root: /home/phoukei/EE526/basejump_stl
+vlsi.core.local_tool_path: /home/phoukei/EE526/ee477-hammer-cad
