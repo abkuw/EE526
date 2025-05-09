@@ -1,60 +1,35 @@
-
 // Abhishek Kumar, Keith Phou
 // EE 526
-// Testbench for the PE (Processing Element) module
-module pe_tb;
-    // Define parameters
-    localparam int B = 4;                   // Number of parallel multipliers per DP
-    localparam int A = 2;                   // Rows of DPs within PE
-    localparam int C = 2;                   // Columns of DPs within PE
+
+// Testbench for the DP (Dot Product)
+module DP_tb;
+    localparam int B = 4;                   // Number of parallel multipliers
     localparam int QUANTIZED_WIDTH = 8;     // Bit-width of input data/weights
     localparam int RESULT_WIDTH = 4*QUANTIZED_WIDTH;  // Width of accumulator
     
     // Define signals
-    logic                            clk;
-    logic                            reset;     
-    logic signed [QUANTIZED_WIDTH-1:0] data_i[B*C-1:0];    // 8 inputs for B=4, C=2
-    logic signed [QUANTIZED_WIDTH-1:0] weights_i[B*A-1:0]; // 8 inputs for B=4, A=2
-    logic signed [QUANTIZED_WIDTH-1:0] data_o[B*C-1:0];    // 8 outputs
-    logic signed [QUANTIZED_WIDTH-1:0] weights_o[B*A-1:0]; // 8 outputs
+    logic                          clk;
+    logic                          reset;   
+    logic                          clear_acc;  // New signal to clear accumulator  
+    logic signed [QUANTIZED_WIDTH-1:0] data_i   [B-1:0];
+    logic signed [QUANTIZED_WIDTH-1:0] weight_i [B-1:0];
+    logic signed [QUANTIZED_WIDTH-1:0] data_v_o   [B-1:0];
+    logic signed [QUANTIZED_WIDTH-1:0] weight_h_o [B-1:0];
+    logic signed [RESULT_WIDTH-1:0]    result;
+    logic signed [RESULT_WIDTH-1:0]    expected_result; // hold expected value
     
-    // Expected output signals for validation
-    logic signed [QUANTIZED_WIDTH-1:0] expected_data_o[B*C-1:0];
-    logic signed [QUANTIZED_WIDTH-1:0] expected_weights_o[B*A-1:0];
-    
-    // Arrays for Test 5
-    logic signed [QUANTIZED_WIDTH-1:0] random_data[B*C-1:0];
-    logic signed [QUANTIZED_WIDTH-1:0] random_weights[B*A-1:0];
-    
-    // Arrays for Test 9
-    logic signed [QUANTIZED_WIDTH-1:0] input_data_1[B*C-1:0];
-    logic signed [QUANTIZED_WIDTH-1:0] input_weights_1[B*A-1:0];
-    logic signed [QUANTIZED_WIDTH-1:0] input_data_2[B*C-1:0];
-    logic signed [QUANTIZED_WIDTH-1:0] input_weights_2[B*A-1:0];
-    logic signed [QUANTIZED_WIDTH-1:0] input_data_3[B*C-1:0];
-    logic signed [QUANTIZED_WIDTH-1:0] input_weights_3[B*A-1:0];
-    
-    // Define the seed for random number generation
-    int seed;
-
-    initial begin
-        $fsdbDumpfile("waveform.fsdb");
-        $fsdbDumpvars();
-    end
-    
-    // Instantiate the PE (device under test)
-    PE #(
+    DP #(
         .B(B),
-        .A(A),
-        .C(C),
         .QUANTIZED_WIDTH(QUANTIZED_WIDTH)
     ) dut (
         .clk_i(clk),
         .reset_i(reset),
+        .clear_acc_i(clear_acc),  // Connect the new signal
         .data_i(data_i),
-        .weights_i(weights_i),
-        .data_o(data_o),
-        .weights_o(weights_o)
+        .weight_i(weight_i),
+        .data_v_o(data_v_o),
+        .weight_h_o(weight_h_o),
+        .result(result)
     );
     
     // Clock generation
@@ -67,439 +42,235 @@ module pe_tb;
     // Helper function to print array values
     function automatic void print_arrays(
         string test_name,
-        logic signed [QUANTIZED_WIDTH-1:0] data[B*C-1:0],
-        logic signed [QUANTIZED_WIDTH-1:0] weights[B*A-1:0]
+        logic signed [QUANTIZED_WIDTH-1:0] data [B-1:0],
+        logic signed [QUANTIZED_WIDTH-1:0] weights [B-1:0]
     );
         $write("%s: data = [", test_name);
-        for (int i = 0; i < B*C; i++) begin
+        for (int i = 0; i < B; i++) begin
             $write("%d", $signed(data[i]));
-            if (i < B*C-1) $write(", ");
+            if (i < B-1) $write(", ");
         end
         $write("], weights = [");
-        for (int i = 0; i < B*A; i++) begin
+        for (int i = 0; i < B; i++) begin
             $write("%d", $signed(weights[i]));
-            if (i < B*A-1) $write(", ");
+            if (i < B-1) $write(", ");
         end
         $write("]\n");
     endfunction
     
-    // Helper function to print output arrays
-    function automatic void print_output_arrays(
-        string test_name,
-        logic signed [QUANTIZED_WIDTH-1:0] data[B*C-1:0],
-        logic signed [QUANTIZED_WIDTH-1:0] weights[B*A-1:0]
+    // Test case function to calculate expected result
+    function automatic logic signed [RESULT_WIDTH-1:0] calculate_expected(
+        logic signed [QUANTIZED_WIDTH-1:0] data [B-1:0],
+        logic signed [QUANTIZED_WIDTH-1:0] weights [B-1:0],
+        logic signed [RESULT_WIDTH-1:0] prev_result
     );
-        $write("%s: data_o = [", test_name);
-        for (int i = 0; i < B*C; i++) begin
-            $write("%d", $signed(data[i]));
-            if (i < B*C-1) $write(", ");
+        logic signed [RESULT_WIDTH-1:0] sum = 0;
+        for (int i = 0; i < B; i++) begin
+            sum += data[i] * weights[i];
         end
-        $write("], weights_o = [");
-        for (int i = 0; i < B*A; i++) begin
-            $write("%d", $signed(weights[i]));
-            if (i < B*A-1) $write(", ");
-        end
-        $write("]\n");
-    endfunction
-    
-    // Helper function to print expected vs. actual outputs
-    function automatic void verify_outputs(
-        string test_name,
-        logic signed [QUANTIZED_WIDTH-1:0] actual_data[B*C-1:0],
-        logic signed [QUANTIZED_WIDTH-1:0] expected_data[B*C-1:0],
-        logic signed [QUANTIZED_WIDTH-1:0] actual_weights[B*A-1:0],
-        logic signed [QUANTIZED_WIDTH-1:0] expected_weights[B*A-1:0]
-    );
-        bit data_match = 1;
-        bit weights_match = 1;
-        
-        // Check data outputs
-        for (int i = 0; i < B*C; i++) begin
-            if (actual_data[i] !== expected_data[i]) begin
-                data_match = 0;
-                break;
-            end
-        end
-        
-        // Check weight outputs
-        for (int i = 0; i < B*A; i++) begin
-            if (actual_weights[i] !== expected_weights[i]) begin
-                weights_match = 0;
-                break;
-            end
-        end
-        
-        // Print verification results
-        if (data_match && weights_match) begin
-            $display("%s: PASS - All outputs match expected values", test_name);
-        end else begin
-            $display("%s: FAIL - Output mismatch", test_name);
-            
-            // Print expected vs actual for debugging
-            $write("Expected data_o = [");
-            for (int i = 0; i < B*C; i++) begin
-                $write("%d", $signed(expected_data[i]));
-                if (i < B*C-1) $write(", ");
-            end
-            $write("], Actual data_o = [");
-            for (int i = 0; i < B*C; i++) begin
-                $write("%d", $signed(actual_data[i]));
-                if (i < B*C-1) $write(", ");
-            end
-            $write("]\n");
-            
-            $write("Expected weights_o = [");
-            for (int i = 0; i < B*A; i++) begin
-                $write("%d", $signed(expected_weights[i]));
-                if (i < B*A-1) $write(", ");
-            end
-            $write("], Actual weights_o = [");
-            for (int i = 0; i < B*A; i++) begin
-                $write("%d", $signed(actual_weights[i]));
-                if (i < B*A-1) $write(", ");
-            end
-            $write("]\n");
-        end
+        return prev_result + sum;
     endfunction
     
     initial begin
         // Initialize signals
         reset = 1;
-        seed = 42; // Initialize the seed here
+        clear_acc = 0;
+        expected_result = 0;
         
-        for (int i = 0; i < B*C; i++) begin
+        for (int i = 0; i < B; i++) begin
             data_i[i] = 0;
-            expected_data_o[i] = 0;
-            // Initialize test arrays
-            random_data[i] = 0;
-            input_data_1[i] = 0;
-            input_data_2[i] = 0;
-            input_data_3[i] = 0;
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = 0;
-            expected_weights_o[i] = 0;
-            // Initialize test arrays
-            random_weights[i] = 0;
-            input_weights_1[i] = 0;
-            input_weights_2[i] = 0;
-            input_weights_3[i] = 0;
+            weight_i[i] = 0;
         end
         
         // Test 1: Reset active
         @(posedge clk);
-        $display("Test 1: Reset active");
-        
-        // During reset, all outputs should be zero
-        for (int i = 0; i < B*C; i++) begin
-            expected_data_o[i] = 0;
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            expected_weights_o[i] = 0;
-        end
-        
-        verify_outputs("Test 1", data_o, expected_data_o, weights_o, expected_weights_o);
+        $display("Test 1: Reset active, result = %d (Expected: %d)", $signed(result), 0);
         
         // Test 2: Release reset
         reset = 0;
         @(posedge clk);
-        $display("Test 2: Reset inactive");
+        $display("Test 2: Reset inactive, result = %d (Expected: %d)", $signed(result), 0);
         
-        // After reset release, outputs should still be zero until new data propagates
-        verify_outputs("Test 2", data_o, expected_data_o, weights_o, expected_weights_o);
-        
-        // Test 3: Basic data flow - simple values
-        for (int i = 0; i < B*C; i++) begin
-            data_i[i] = i + 1;     // [1,2,3,4,5,6,7,8]
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = i + 1;  // [1,2,3,4,5,6,7,8]
-        end
-        
-        print_arrays("Test 3 inputs", data_i, weights_i);
-        
-        // In a 2x2 systolic array, the PE should follow this pipeline:
-        // Cycle 1: Input data enters DP1 (top-left) and DP2 (top-right)
-        @(posedge clk);
-        
-        // Cycle 2: Input data passes from DP1 to DP3 (bottom-left), from DP2 to DP4 (bottom-right)
-        //          Input weights pass from DP1 to DP2, from DP3 to DP4
-        @(posedge clk);
-        
-        // Cycle 3: Data from DP3 and DP4 gets buffered to outputs
-        //          Weights from DP2 and DP4 get buffered to outputs
-        @(posedge clk);
-        
-        // Cycle 4: Buffered data is now visible at the outputs
-        @(posedge clk);
-        
-        // Expected outputs: Data and weights should flow through and appear at the outputs
+        // Test 3: Basic dot product calculation
+        // Set inputs for test 3
         for (int i = 0; i < B; i++) begin
-            expected_data_o[i] = i + 1;       // data_i[0:3] should appear at data_o[0:3]
-            expected_data_o[i+B] = i + 1 + B; // data_i[4:7] should appear at data_o[4:7]
-            
-            expected_weights_o[i] = i + 1;    // weights_i[0:3] should appear at weights_o[0:3]
-            expected_weights_o[i+B] = i + 1 + B; // weights_i[4:7] should appear at weights_o[4:7]
+            data_i[i] = i + 1;         // [1, 2, 3, 4]
+            weight_i[i] = 1;           // [1, 1, 1, 1]
         end
+        print_arrays("Test 3 inputs", data_i, weight_i);
         
-        print_output_arrays("Test 3 outputs", data_o, weights_o);
-        verify_outputs("Test 3", data_o, expected_data_o, weights_o, expected_weights_o);
-        $display("Test 3: Basic data flow complete");
-        
-        // Test 4: Alternating positive/negative values
-        for (int i = 0; i < B*C; i++) begin
-            data_i[i] = (i % 2 == 0) ? 10 : -10;  // [10,-10,10,-10,10,-10,10,-10]
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = (i % 2 == 0) ? 5 : -5; // [5,-5,5,-5,5,-5,5,-5]
-        end
-        
-        print_arrays("Test 4 inputs", data_i, weights_i);
-        
-        // Wait for 4 cycles for full propagation (same pipeline)
+        // First clock edge - inputs are registered
         @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
+        // Second clock edge - outputs are available
+        //@(posedge clk);
         
-        // Expected alternating pattern after propagation
-        for (int i = 0; i < B*C; i++) begin
-            expected_data_o[i] = (i % 2 == 0) ? 10 : -10;
-        end
+        // Result should now reflect the dot product of [1,2,3,4] * [1,1,1,1] = 10
+        expected_result = 10;  // 1*1 + 2*1 + 3*1 + 4*1 = 10
+        $display("Test 3: Basic dot product, result = %d (Expected: %d)", $signed(result), expected_result);
         
-        for (int i = 0; i < B*A; i++) begin
-            expected_weights_o[i] = (i % 2 == 0) ? 5 : -5;
-        end
-        
-        print_output_arrays("Test 4 outputs", data_o, weights_o);
-        verify_outputs("Test 4", data_o, expected_data_o, weights_o, expected_weights_o);
-        $display("Test 4: Alternating values test complete");
-        
-        // Test 5: Random values within INT8 range
-        for (int i = 0; i < B*C; i++) begin
-            // Generate random value between -128 and 127 (INT8 range)
-            data_i[i] = $random(seed) % 256 - 128;
-            random_data[i] = data_i[i];  // Save for verification
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            // Generate random value between -128 and 127 (INT8 range)
-            weights_i[i] = $random(seed) % 256 - 128;
-            random_weights[i] = weights_i[i];  // Save for verification
-        end
-        
-        print_arrays("Test 5 inputs", data_i, weights_i);
-        
-        // Wait for 4 cycles for full propagation
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        
-        // Set expected outputs based on the random inputs
+        // Test 4: Dot product with negative weights
+        // Set inputs for test 4
         for (int i = 0; i < B; i++) begin
-            expected_data_o[i] = random_data[i];       // data from top-left DP
-            expected_data_o[i+B] = random_data[i+B];   // data from top-right DP
-            
-            expected_weights_o[i] = random_weights[i];    // weights from top-left DP
-            expected_weights_o[i+B] = random_weights[i+B]; // weights from bottom-left DP
+            data_i[i] = i + 1;         // [1, 2, 3, 4]
+            weight_i[i] = -1;          // [-1, -1, -1, -1]
         end
+        print_arrays("Test 4 inputs", data_i, weight_i);
         
-        print_output_arrays("Test 5 outputs", data_o, weights_o);
-        verify_outputs("Test 5", data_o, expected_data_o, weights_o, expected_weights_o);
-        $display("Test 5: Random values test complete");
-        
-        // Test 6: Maximum values test
-        for (int i = 0; i < B*C; i++) begin
-            data_i[i] = 127;  // Max positive INT8
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = 127; // Max positive INT8
-        end
-        
-        print_arrays("Test 6 inputs", data_i, weights_i);
-        
-        // Wait for 4 cycles for full propagation
+        // First clock edge - inputs are registered
         @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
+        // Second clock edge - outputs are available
+        //@(posedge clk);
         
-        // All outputs should be max positive value
-        for (int i = 0; i < B*C; i++) begin
-            expected_data_o[i] = 127;
+        // Result should now reflect the accumulated dot product: 
+        // Previous 10 + ([1,2,3,4] * [-1,-1,-1,-1]) = 10 + (-10) = 0
+        expected_result = 0;  // Previous 10 + dot product of -10
+        $display("Test 4: Negative weights, result = %d (Expected: %d)", $signed(result), expected_result);
+        
+        // Test 5: Clear accumulator using clear_acc signal
+        clear_acc = 1;  // Assert clear_acc signal
+        data_i[0] = 10;    weight_i[0] = -5;
+        data_i[1] = -7;    weight_i[1] = 3;
+        data_i[2] = 12;    weight_i[2] = 4;
+        data_i[3] = -9;    weight_i[3] = -6;
+        print_arrays("Test 5 inputs", data_i, weight_i);
+        
+        // First clock edge - inputs are registered
+        @(posedge clk);
+        clear_acc = 0;  // De-assert clear_acc signal
+        // Second clock edge - outputs are available
+        //@(posedge clk);
+        
+        // Since we cleared the accumulator, result should be just this dot product:
+        // 10*(-5) + (-7)*3 + 12*4 + (-9)*(-6) = -50 - 21 + 48 + 54 = 31
+        expected_result = 31;
+        $display("Test 5: Clear accumulator and mixed values, result = %d (Expected: %d)", $signed(result), expected_result);
+        
+        // Test 6: Accumulation over multiple cycles
+        data_i[0] = 5;     weight_i[0] = 5;
+        data_i[1] = 5;     weight_i[1] = 5;
+        data_i[2] = 5;     weight_i[2] = 5;
+        data_i[3] = 5;     weight_i[3] = 5;
+        print_arrays("Test 6 inputs", data_i, weight_i);
+        
+        // First clock edge - inputs are registered
+        @(posedge clk);
+        // Second clock edge - outputs are available
+        //@(posedge clk);
+        
+        // Previous 31 + (5*5 + 5*5 + 5*5 + 5*5) = 31 + 100 = 131
+        expected_result = 131;
+        $display("Test 6: Accumulation cycle 1, result = %d (Expected: %d)", $signed(result), expected_result);
+        
+        // Test 7: Continue accumulation
+        data_i[0] = 10;    weight_i[0] = 10;
+        data_i[1] = 10;    weight_i[1] = 10;
+        data_i[2] = 10;    weight_i[2] = 10;
+        data_i[3] = 10;    weight_i[3] = 10;
+        print_arrays("Test 7 inputs", data_i, weight_i);
+        
+        // First clock edge - inputs are registered
+        @(posedge clk);
+        // Second clock edge - outputs are available
+        //@(posedge clk);
+        
+        // Previous 131 + (10*10 + 10*10 + 10*10 + 10*10) = 131 + 400 = 531
+        expected_result = 531;
+        $display("Test 7: Accumulation cycle 2, result = %d (Expected: %d)", $signed(result), expected_result);
+        
+        // Test 8: Check systolic pass-through with clear_acc
+        clear_acc = 1;  // Assert clear_acc signal again
+        data_i[0] = 20;    weight_i[0] = 30;
+        data_i[1] = 21;    weight_i[1] = 31;
+        data_i[2] = 22;    weight_i[2] = 32;
+        data_i[3] = 23;    weight_i[3] = 33;
+        print_arrays("Test 8 inputs", data_i, weight_i);
+        
+        // First clock edge - inputs are registered
+        @(posedge clk);
+        clear_acc = 0;  // De-assert clear_acc signal
+        
+        // Check pass-through outputs immediately after first clock edge
+        $write("Test 8: Systolic pass-through data = [");
+        for (int i = 0; i < B; i++) begin
+            $write("%d", $signed(data_v_o[i]));
+            if (i < B-1) $write(", ");
         end
-        
-        for (int i = 0; i < B*A; i++) begin
-            expected_weights_o[i] = 127;
+        $write("], weights = [");
+        for (int i = 0; i < B; i++) begin
+            $write("%d", $signed(weight_h_o[i]));
+            if (i < B-1) $write(", ");
         end
+        $write("]\n");
         
-        print_output_arrays("Test 6 outputs", data_o, weights_o);
-        verify_outputs("Test 6", data_o, expected_data_o, weights_o, expected_weights_o);
-        $display("Test 6: Maximum values test complete");
+        // Second clock edge - outputs are available
+        //@(posedge clk);
         
-        // Test 7: Minimum values test
-        for (int i = 0; i < B*C; i++) begin
-            data_i[i] = -128;  // Min negative INT8
-        end
+        // Since we cleared the accumulator, result should be just this dot product:
+        // 20*30 + 21*31 + 22*32 + 23*33 = 600 + 651 + 704 + 759 = 2714
+        expected_result = 2714;
+        $display("Test 8: Clear accumulator and check systolic pass-through, result = %d (Expected: %d)", $signed(result), expected_result);
         
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = -128; // Min negative INT8
-        end
-        
-        print_arrays("Test 7 inputs", data_i, weights_i);
-        
-        // Wait for 4 cycles for full propagation
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        @(posedge clk);
-        
-        // All outputs should be min negative value
-        for (int i = 0; i < B*C; i++) begin
-            expected_data_o[i] = -128;
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            expected_weights_o[i] = -128;
-        end
-        
-        print_output_arrays("Test 7 outputs", data_o, weights_o);
-        verify_outputs("Test 7", data_o, expected_data_o, weights_o, expected_weights_o);
-        $display("Test 7: Minimum values test complete");
-        
-        // Test 8: Reset during operation
-        for (int i = 0; i < B*C; i++) begin
-            data_i[i] = i * 2;  // [0,2,4,6,8,10,12,14]
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = i * 3; // [0,3,6,9,12,15,18,21]
-        end
-        
-        print_arrays("Test 8 inputs", data_i, weights_i);
-        
-        // Wait for partial propagation (2 cycles), then reset
-        @(posedge clk);
-        @(posedge clk);
+        // Test 9: Reset again
         reset = 1;
-        
-        // Wait a cycle for reset to take effect
         @(posedge clk);
+        //@(posedge clk); // Add an extra clock cycle for reset to take effect
+        expected_result = 0;  // Reset makes the expected value 0
+        $display("Test 9: Reset active, result = %d (Expected: %d)", $signed(result), expected_result);
         
-        // After reset, all outputs should be zero
-        for (int i = 0; i < B*C; i++) begin
-            expected_data_o[i] = 0;
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            expected_weights_o[i] = 0;
-        end
-        
-        print_output_arrays("Test 8 outputs (after reset)", data_o, weights_o);
-        verify_outputs("Test 8", data_o, expected_data_o, weights_o, expected_weights_o);
-        $display("Test 8: Reset during operation test complete");
-        
-        // Test 9: Verify systolic data flow with consecutive different inputs
+        // Test 10: Check the boundary values
         reset = 0;
+        data_i[0] = 127;   weight_i[0] = 127;   // Max positive INT8
+        data_i[1] = -128;  weight_i[1] = -128;  // Min negative INT8
+        data_i[2] = 127;   weight_i[2] = -128;
+        data_i[3] = -128;  weight_i[3] = 127;
+        print_arrays("Test 10 inputs", data_i, weight_i);
+        
+        // First clock edge - inputs are registered
         @(posedge clk);
+        // Second clock edge - outputs are available
+        //@(posedge clk);
         
-        // First set of inputs
-        for (int i = 0; i < B*C; i++) begin
-            data_i[i] = i + 1;  // [1,2,3,4,5,6,7,8]
-            input_data_1[i] = data_i[i];
-        end
+        // 127*127 + (-128)*(-128) + 127*(-128) + (-128)*127 = 16129 + 16384 - 16256 - 16256 = 1
+        expected_result = 1;
+        $display("Test 10: Boundary values, result = %d (Expected: %d)", $signed(result), expected_result);
         
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = 10 + i; // [10,11,12,13,14,15,16,17]
-            input_weights_1[i] = weights_i[i];
-        end
+        // Test 11: Verify clear_acc doesn't affect data flow
+        clear_acc = 1;  // Assert clear_acc signal
+        data_i[0] = 1;    weight_i[0] = 1;
+        data_i[1] = 1;    weight_i[1] = 1;
+        data_i[2] = 1;    weight_i[2] = 1;
+        data_i[3] = 1;    weight_i[3] = 1;
+        print_arrays("Test 11 inputs", data_i, weight_i);
         
-        print_arrays("Test 9.1 inputs", data_i, weights_i);
+        // First clock edge - inputs are registered
         @(posedge clk);
+        clear_acc = 0;  // De-assert clear_acc signal
         
-        // Second set of inputs
-        for (int i = 0; i < B*C; i++) begin
-            data_i[i] = 20 + i;  // [20,21,22,23,24,25,26,27]
-            input_data_2[i] = data_i[i];
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = 30 + i; // [30,31,32,33,34,35,36,37]
-            input_weights_2[i] = weights_i[i];
-        end
-        
-        print_arrays("Test 9.2 inputs", data_i, weights_i);
-        @(posedge clk);
-        
-        // Third set of inputs
-        for (int i = 0; i < B*C; i++) begin
-            data_i[i] = 40 + i;  // [40,41,42,43,44,45,46,47]
-            input_data_3[i] = data_i[i];
-        end
-        
-        for (int i = 0; i < B*A; i++) begin
-            weights_i[i] = 50 + i; // [50,51,52,53,54,55,56,57]
-            input_weights_3[i] = weights_i[i];
-        end
-        
-        print_arrays("Test 9.3 inputs", data_i, weights_i);
-        
-        // Wait for 2 more cycles to complete the pipeline for the first input
-        @(posedge clk);
-        @(posedge clk);
-        
-        // At this point, the first set of inputs should be at the outputs
+        // Check pass-through outputs immediately after first clock edge
+        $write("Test 11: Data flow with clear_acc - data = [");
         for (int i = 0; i < B; i++) begin
-            expected_data_o[i] = input_data_1[i];       // First data set from top-left DP
-            expected_data_o[i+B] = input_data_1[i+B];   // First data set from top-right DP
-            
-            expected_weights_o[i] = input_weights_1[i];    // First weights set from top-left DP
-            expected_weights_o[i+B] = input_weights_1[i+B]; // First weights set from bottom-left DP
+            $write("%d", $signed(data_v_o[i]));
+            if (i < B-1) $write(", ");
         end
+        $write("], weights = [");
+        for (int i = 0; i < B; i++) begin
+            $write("%d", $signed(weight_h_o[i]));
+            if (i < B-1) $write(", ");
+        end
+        $write("]\n");
         
-        $display("Test 9 - After 5 cycles (first set at outputs):");
-        print_output_arrays("Test 9.3 outputs", data_o, weights_o);
-        verify_outputs("Test 9.3", data_o, expected_data_o, weights_o, expected_weights_o);
+        // Second clock edge - outputs are available
+        //@(posedge clk);
         
+        // Since we cleared the accumulator, result should be just this dot product:
+        // 1*1 + 1*1 + 1*1 + 1*1 = 4
+        expected_result = 4;
+        $display("Test 11: Clear accumulator and verify data flow, result = %d (Expected: %d)", $signed(result), expected_result);
+          
+        // Extra cycles for any final observations
+        @(posedge clk);
         @(posedge clk);
         
-        // After one more cycle, the second set of inputs should be at the outputs
-        for (int i = 0; i < B; i++) begin
-            expected_data_o[i] = input_data_2[i];       
-            expected_data_o[i+B] = input_data_2[i+B];   
-            
-            expected_weights_o[i] = input_weights_2[i];    
-            expected_weights_o[i+B] = input_weights_2[i+B]; 
-        end
-        
-        $display("Test 9 - After 6 cycles (second set at outputs):");
-        print_output_arrays("Test 9.4 outputs", data_o, weights_o);
-        verify_outputs("Test 9.4", data_o, expected_data_o, weights_o, expected_weights_o);
-        
-        @(posedge clk);
-        
-        // After one more cycle, the third set of inputs should be at the outputs
-        for (int i = 0; i < B; i++) begin
-            expected_data_o[i] = input_data_3[i];       
-            expected_data_o[i+B] = input_data_3[i+B];   
-            
-            expected_weights_o[i] = input_weights_3[i];    
-            expected_weights_o[i+B] = input_weights_3[i+B]; 
-        end
-        
-        $display("Test 9 - After 7 cycles (third set at outputs):");
-        print_output_arrays("Test 9.5 outputs", data_o, weights_o);
-        verify_outputs("Test 9.5", data_o, expected_data_o, weights_o, expected_weights_o);
-        
-        $display("Test 9: Systolic data flow test complete");
-        
-        $display("All tests completed!");
         $finish;
     end
 endmodule

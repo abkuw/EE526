@@ -9,6 +9,7 @@ module DP #(
 ) (
     input logic clk_i,
     input logic reset_i,
+    input logic clear_acc_i,           // Signal to clear accumulator without reset
 
     // Inputs (B vectors, each QUANTIZED_WIDTH bits wide)
     input logic signed [QUANTIZED_WIDTH-1:0] data_i   [B-1:0],
@@ -19,86 +20,53 @@ module DP #(
     output logic signed [QUANTIZED_WIDTH-1:0] weight_h_o [B-1:0],
 
     // Accumulated result output (registered)
-    // Width needs to be sufficient to avoid overflow.
-    // Summing B products of (QUANTIZED_WIDTH * QUANTIZED_WIDTH) bits.
-    // Product width = 2 * QUANTIZED_WIDTH
-    // Sum width needs ~ (2 * QUANTIZED_WIDTH) + ceil(log2(B)) bits.
-    // Example: B=4, QW=8 -> Product=16 bits. Sum ~ 16 + log2(4) = 18 bits minimum.
-    // Using 32 bits (4*QW) provides headroom, common for INT8 MAC units.
     output logic signed [4*QUANTIZED_WIDTH-1:0] result
 );
 
-    // Intermediate signals
-    // Array to hold the B individual products
-    logic signed [2*QUANTIZED_WIDTH-1:0] products [B-1:0];
-
-    // Combinational signal holding the sum of the B products for the current cycle
-    logic signed [4*QUANTIZED_WIDTH-1:0] sum_of_products_comb;
-
-    // Internal accumulator register (matches the output 'result')
+    // Calculate dot product combinationally
+    function automatic logic signed [4*QUANTIZED_WIDTH-1:0] calc_dot_product(
+        logic signed [QUANTIZED_WIDTH-1:0] data [B-1:0],
+        logic signed [QUANTIZED_WIDTH-1:0] weights [B-1:0]
+    );
+        logic signed [4*QUANTIZED_WIDTH-1:0] sum = 0;
+        for (int i = 0; i < B; i++) begin
+            sum += data[i] * weights[i];
+        end
+        return sum;
+    endfunction
+    
+    // Internal signals
     logic signed [4*QUANTIZED_WIDTH-1:0] result_reg;
-
-
-    // Generate B parallel multipliers
-    genvar i;
-    generate
-        for (i = 0; i < B; i = i + 1) begin : multipliers
-            // Calculate individual product (signed multiplication)
-            // Result width is 2 * QUANTIZED_WIDTH
-            assign products[i] = data_i[i] * weight_i[i];
-        end
-    endgenerate
-
-    // Combinational logic to sum the B products
-    // This implements the adder tree following the multipliers
-    always_comb begin
-        sum_of_products_comb = '0; // Start with zero for summation
-        for (int j = 0; j < B; j = j + 1) begin
-            // Add each product to the sum, sign extension happens automatically
-            sum_of_products_comb = sum_of_products_comb + products[j];
-        end
-    end
-
-    // Registered logic for accumulation and pass-through
+    
+    // Pass-through for systolic array
     always_ff @(posedge clk_i or posedge reset_i) begin
         if (reset_i) begin
-            // Reset registers to zero
-            // Use simple '0 assignment, SystemVerilog infers dimensions
-            data_v_o   <= '{default: '0};
-            weight_h_o <= '{default: '0};
-            result_reg <= '0;
-
-            /* Added for testbenching I needed this for simulation to run - Keith
-            // Reset registers to zero - properly reset unpacked arrays element-by-element
-            for (int j = 0; j < B; j = j + 1) begin
-                data_v_o[j]   <= '0;
-                weight_h_o[j] <= '0;
+            for (int i = 0; i < B; i++) begin
+                data_v_o[i] <= '0;
+                weight_h_o[i] <= '0;
             end
-            result_reg <= '0;
-            */
         end else begin
-            // Pass inputs to outputs (systolic movement)
-            data_v_o   <= data_i;
-            weight_h_o <= weight_i;
-
-            // Accumulate the sum of products calculated in this cycle
-            result_reg <= result_reg + sum_of_products_comb;
-
-            /* Added for tb - Keith
-            // Pass inputs to outputs (systolic movement)
-            // Handle array assignments element-by-element
-            for (int j = 0; j < B; j = j + 1) begin
-                data_v_o[j]   <= data_i[j];
-                weight_h_o[j] <= weight_i[j];
+            for (int i = 0; i < B; i++) begin
+                data_v_o[i] <= data_i[i];
+                weight_h_o[i] <= weight_i[i];
             end
-
-            // Accumulate the sum of products calculated in this cycle
-            result_reg <= result_reg + sum_of_products_comb;
-            */
         end
     end
-
-    // Assign the final accumulated value to the output port
+    
+    // Accumulation logic
+    always_ff @(posedge clk_i or posedge reset_i) begin
+        if (reset_i) begin
+            result_reg <= '0;
+        end else if (clear_acc_i) begin
+            // When clear_acc is asserted, start with current dot product only
+            result_reg <= calc_dot_product(data_i, weight_i);
+        end else begin
+            // Normal accumulation
+            result_reg <= result_reg + calc_dot_product(data_i, weight_i);
+        end
+    end
+    
+    // Assign result
     assign result = result_reg;
 
 endmodule
