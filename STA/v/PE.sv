@@ -76,6 +76,7 @@ module PE #(
     end
 
     // --- DP Instantiations ---
+    // [0,0]
     DP #(.B(B), .QUANTIZED_WIDTH(QUANTIZED_WIDTH)) DP1 (
         .clk_i(clk_i), 
         .reset_i(reset_i),
@@ -86,7 +87,7 @@ module PE #(
         .data_v_o(dp1_data_v_o),
         .result(resultdp1)
     );
-
+    // [0,1]
     DP #(.B(B), .QUANTIZED_WIDTH(QUANTIZED_WIDTH)) DP2 (
         .clk_i(clk_i), 
         .reset_i(reset_i),
@@ -97,7 +98,7 @@ module PE #(
         .data_v_o(dp2_data_v_o),
         .result(resultdp2)
     );
-
+    // [1,0]
     DP #(.B(B), .QUANTIZED_WIDTH(QUANTIZED_WIDTH)) DP3 (
         .clk_i(clk_i), 
         .reset_i(reset_i),
@@ -108,7 +109,7 @@ module PE #(
         .data_v_o(dp3_data_v_o),
         .result(resultdp3)
     );
-
+    // [1,1]
     DP #(.B(B), .QUANTIZED_WIDTH(QUANTIZED_WIDTH)) DP4 (
         .clk_i(clk_i), 
         .reset_i(reset_i),
@@ -120,30 +121,36 @@ module PE #(
         .result(resultdp4)
     );
 
-    // --- Output Buffering ---
-    SimpleTypeParameterizedBuffer #(.T(dp_vector_array_t)) buf_weights_out_top (
-        .clk_i(clk_i), .reset_i(reset_i),
-        .i(dp2_weight_h_o),
-        .o(weights_o[0 +: B])
-    );
+    // // --- Output Buffering ---
+    // SimpleTypeParameterizedBuffer #(.T(dp_vector_array_t)) buf_weights_out_top (
+    //     .clk_i(clk_i), .reset_i(reset_i),
+    //     .i(dp2_weight_h_o),
+    //     .o(weights_o[0 +: B])
+    // );
     
-    SimpleTypeParameterizedBuffer #(.T(dp_vector_array_t)) buf_data_out_left (
-        .clk_i(clk_i), .reset_i(reset_i),
-        .i(dp3_data_v_o),
-        .o(data_o[0 +: B])
-    );
+    // SimpleTypeParameterizedBuffer #(.T(dp_vector_array_t)) buf_data_out_left (
+    //     .clk_i(clk_i), .reset_i(reset_i),
+    //     .i(dp3_data_v_o),
+    //     .o(data_o[0 +: B])
+    // );
     
-    SimpleTypeParameterizedBuffer #(.T(dp_vector_array_t)) buf_weights_out_bottom (
-        .clk_i(clk_i), .reset_i(reset_i),
-        .i(dp4_weight_h_o),
-        .o(weights_o[B +: B])
-    );
+    // SimpleTypeParameterizedBuffer #(.T(dp_vector_array_t)) buf_weights_out_bottom (
+    //     .clk_i(clk_i), .reset_i(reset_i),
+    //     .i(dp4_weight_h_o),
+    //     .o(weights_o[B +: B])
+    // );
     
-    SimpleTypeParameterizedBuffer #(.T(dp_vector_array_t)) buf_data_out_right (
-        .clk_i(clk_i), .reset_i(reset_i),
-        .i(dp4_data_v_o),
-        .o(data_o[B +: B])
-    );
+    // SimpleTypeParameterizedBuffer #(.T(dp_vector_array_t)) buf_data_out_right (
+    //     .clk_i(clk_i), .reset_i(reset_i),
+    //     .i(dp4_data_v_o),
+    //     .o(data_o[B +: B])
+    // );
+
+    // Direct connections without extra buffering
+    assign weights_o[0 +: B] = dp2_weight_h_o;
+    assign data_o[0 +: B] = dp3_data_v_o;
+    assign weights_o[B +: B] = dp4_weight_h_o;
+    assign data_o[B +: B] = dp4_data_v_o;
 
     // --- Result Registration and Output Assignment ---
     always_ff @(posedge clk_i or posedge reset_i) begin
