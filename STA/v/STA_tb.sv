@@ -1,6 +1,10 @@
-`timescale 1ns/1ps
-
 module STA_tb;
+
+    initial begin
+        $fsdbDumpfile("waveform.fsdb");
+        $fsdbDumpvars();
+    end
+
     // Parameters
     localparam N = 2;                  // Number of PE columns
     localparam M = 2;                  // Number of PE rows
@@ -34,7 +38,7 @@ module STA_tb;
 
     // Variables used in tasks
     integer i, j, k, pe_row, pe_col, dp_row, dp_col, row_idx, col_idx;
-    integer error_count;
+    integer error_count, cycle;
     logic signed [4*QUANTIZED_WIDTH-1:0] actual, expected;
 
     // DUT instantiation
@@ -54,10 +58,13 @@ module STA_tb;
         .result_o(result_o)
     );
 
+    // Clock period
+    localparam CLK_PERIOD = 100; // 100ns (100MHz)
+
     // Clock generation
     initial begin
         clk = 0;
-        forever #5 clk = ~clk;  // 100MHz clock
+        forever #(CLK_PERIOD/2) clk = ~clk;
     end
 
     // Test stimulus
@@ -65,10 +72,12 @@ module STA_tb;
         // Initialize signals
         reset = 1;
         clear_acc = 0;
-        initialize_data_and_weights();
+        initialize_zeros();
         
         // Reset the DUT
-        #20 reset = 0;
+        @(posedge clk);
+        @(posedge clk);
+        reset = 0;
         
         $display("=== Starting STA Test ===");
         $display("Configuration: %0d x %0d PE grid, each PE contains 2x2 DPs, B=%0d", M, N, B);
@@ -89,12 +98,14 @@ module STA_tb;
         run_test_cycle();
         
         // End simulation
-        #20 $display("\n=== STA Test Complete ===");
-        $finish;
+        @(posedge clk);
+        @(posedge clk);
+        $display("\n=== STA Test Complete ===");
+        $finish();
     end
 
     // Initialize all inputs to zeros
-    task initialize_data_and_weights();
+    task initialize_zeros();
         for (i = 0; i < N*B*2; i = i + 1) begin
             data_i[i] = 0;
         end
@@ -104,22 +115,115 @@ module STA_tb;
         end
     endtask
 
-    // Run a full test cycle
+    // Initialize arrays to track which elements have been fed
+    bit fed_a[A_ROWS][A_COLS];
+    bit fed_b[B_ROWS][B_COLS];
+    int weight_idx, data_idx;
+    int row_a, col_a, row_b, col_b;
+
     task run_test_cycle();
-        // Clear accumulators to start new computation
+        // Reset everything
+        reset = 1;
         clear_acc = 1;
-        #10 clear_acc = 0;
+        initialize_zeros();
+        @(posedge clk);
+        @(posedge clk);
+        reset = 0;
+        clear_acc = 0;
         
-        // Allow cycles for data to propagate through the array
-        // For an M×N array, we need at least M+N-1 cycles for full propagation
-        $display("Running systolic array for %0d cycles...", M+N+5);
-        for (i = 0; i < M+N+5; i = i + 1) begin
-            #10; // Wait one clock cycle
+        $display("=== Starting New Test with Reset/Clear ===");
+        
+        // Cycle 0: Feed diagonal 0 (just the top-left element)
+        initialize_zeros();
+        weights_i[0] = matrix_A[0][0];  // Top-left PE, data from A
+        data_i[0] = matrix_B[0][0];     // Top-left PE, data from B
+        $display("Cycle %0d: Feeding diagonal 0", cycle);
+        @(posedge clk);
+        cycle++;
+        
+        // Cycle 1: Feed diagonal 1
+        initialize_zeros();
+        weights_i[0] = matrix_A[0][1];  // A[0][1] to top-left PE
+        weights_i[B] = matrix_A[1][0];  // A[1][0] to bottom-left PE
+        data_i[0] = matrix_B[1][0];     // B[1][0] to top-left PE
+        data_i[B] = matrix_B[0][1];     // B[0][1] to top-right PE
+        $display("Cycle %0d: Feeding diagonal 1", cycle);
+        @(posedge clk);
+        cycle++;
+        
+        // Cycle 2: Feed diagonal 2
+        initialize_zeros();
+        weights_i[0] = matrix_A[0][2];  // A[0][2] to top-left PE
+        weights_i[B] = matrix_A[1][1];  // A[1][1] to bottom-left PE
+        weights_i[B*2] = matrix_A[2][0]; // A[2][0] to top PE in second row
+        data_i[0] = matrix_B[2][0];     // B[2][0] to top-left PE
+        data_i[B] = matrix_B[1][1];     // B[1][1] to top-right PE
+        data_i[B*2] = matrix_B[0][2];   // B[0][2] to PE in second column
+        $display("Cycle %0d: Feeding diagonal 2", cycle);
+        @(posedge clk);
+        cycle++;
+        
+        // Cycle 3: Feed diagonal 3
+        initialize_zeros();
+        weights_i[0] = matrix_A[0][3];   // A[0][3]
+        weights_i[B] = matrix_A[1][2];   // A[1][2]
+        weights_i[B*2] = matrix_A[2][1]; // A[2][1]
+        weights_i[B*3] = matrix_A[3][0]; // A[3][0]
+        data_i[0] = matrix_B[3][0];      // B[3][0]
+        data_i[B] = matrix_B[2][1];      // B[2][1]
+        data_i[B*2] = matrix_B[1][2];    // B[1][2]
+        data_i[B*3] = matrix_B[0][3];    // B[0][3]
+        $display("Cycle %0d: Feeding diagonal 3", cycle);
+        @(posedge clk);
+        cycle++;
+        
+        // Cycle 4: Feed diagonal 4
+        initialize_zeros();
+        weights_i[B] = matrix_A[1][3];   // A[1][3]
+        weights_i[B*2] = matrix_A[2][2]; // A[2][2]
+        weights_i[B*3] = matrix_A[3][1]; // A[3][1]
+        data_i[B] = matrix_B[3][1];      // B[3][1]
+        data_i[B*2] = matrix_B[2][2];    // B[2][2]
+        data_i[B*3] = matrix_B[1][3];    // B[1][3]
+        $display("Cycle %0d: Feeding diagonal 4", cycle);
+        @(posedge clk);
+        cycle++;
+        
+        // Cycle 5: Feed diagonal 5
+        initialize_zeros();
+        weights_i[B*2] = matrix_A[2][3]; // A[2][3]
+        weights_i[B*3] = matrix_A[3][2]; // A[3][2]
+        data_i[B*2] = matrix_B[3][2];    // B[3][2]
+        data_i[B*3] = matrix_B[2][3];    // B[2][3]
+        $display("Cycle %0d: Feeding diagonal 5", cycle);
+        @(posedge clk);
+        cycle++;
+        
+        // Cycle 6: Feed diagonal 6 (just the bottom-right element)
+        initialize_zeros();
+        weights_i[B*3] = matrix_A[3][3]; // A[3][3]
+        data_i[B*3] = matrix_B[3][3];    // B[3][3]
+        $display("Cycle %0d: Feeding diagonal 6", cycle);
+        @(posedge clk);
+        cycle++;
+        
+        // Feed zeros for a few more cycles to allow propagation
+        initialize_zeros();
+        $display("Feeding zeros to allow propagation");
+        
+        // Need at least max(M,N) additional cycles
+        for (i = 0; i < 20; i++) begin
+            @(posedge clk);
+            cycle++;
         end
+        
+        $display("Results should be stable now");
         
         // Display and verify results
         display_results();
         verify_results();
+        
+        @(posedge clk);
     endtask
 
     // Prepare identity-like test matrices
@@ -253,7 +357,7 @@ module STA_tb;
             for (j = 0; j < B_COLS; j = j + 1) begin
                 expected_C[i][j] = 0;
                 for (k = 0; k < A_COLS; k = k + 1) begin
-                    expected_C[i][j] = expected_C[i][j] + matrix_A[i][k] * matrix_B[k][j];
+                    expected_C[i][j] = expected_C[i][j] + (matrix_A[i][k] * matrix_B[k][j]);
                 end
             end
         end
