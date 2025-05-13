@@ -39,7 +39,7 @@ module STA_tb;
     logic signed [QUANTIZED_WIDTH-1:0] matrix_B[B_ROWS-1:0][B_COLS-1:0];
     logic signed [4*QUANTIZED_WIDTH-1:0] expected_C[A_ROWS-1:0][B_COLS-1:0];
 
-    // Variables used in tasks
+    // Variables for tasks
     integer i, j, k, pe_row, pe_col, dp_row, dp_col, row_idx, col_idx;
     integer error_count, cycle;
     logic signed [4*QUANTIZED_WIDTH-1:0] actual, expected;
@@ -49,38 +49,216 @@ module STA_tb;
     int row_b;
     int col_b;
 
-    // // Randc for random matrix gen
-    // class MatrixElementGenerator;
-    //     randc bit signed [QUANTIZED_WIDTH-1:0] value;
+    // Randc for random matrix gen
+    class MatrixElementGenerator;
+        randc bit signed [QUANTIZED_WIDTH-1:0] value;
 
-    //     // Define a covergroup to track value distributions
-    //     covergroup value_coverage;
-    //         // Define a coverpoint to track the 'value' variable
-    //         coverpoint value {
-    //             // Define bins to categorize values
-    //             bins negative = {[$:-1]};         // All negative values
-    //             bins zero = {0};                  // Exactly zero
-    //             bins small_pos = {[1:5]};         // Small positive values
-    //             bins medium_pos = {[6:10]};       // Medium positive values
-    //             bins large_pos = {[11:$]};        // Large positive values
-    //         }
-    //     endgroup
+        // Define a covergroup to track value distributions
+        covergroup value_coverage;
+            // Define a coverpoint to track the 'value' variable
+            coverpoint value {
+                bins negative = {[$:-1]};         // All negative values
+                bins zero = {0};                  // Exactly zero
+                bins positive = {[1:$]};          // All positive values
+            }
+        endgroup
         
-    //     // Constructor - create the covergroup instance
-    //     function new();
-    //         value_coverage = new();
-    //     endfunction
+        // Constructor - create the covergroup instance
+        function new();
+            value_coverage = new();
+        endfunction
         
-    //     // Function to sample coverage after randomization
-    //     function void sample_coverage();
-    //         value_coverage.sample();
-    //     endfunction
+        // Function to sample coverage after randomization
+        function void sample_coverage();
+            value_coverage.sample();
+        endfunction
 
-    //     // Constraint the range 
-    //     constraint value_range_c {
-    //         value inside {[-20:20]}; 
-    //     }
-    // endclass
+        // Constraint the range 
+        constraint value_range_c {
+            value inside {[-20:20]}; 
+        }
+    endclass
+
+    // Define a class for matrix coverage
+    class MatrixCoverageCollector;
+        // Reference to the matrices being monitored
+        local logic signed [QUANTIZED_WIDTH-1:0] matrix_A[A_ROWS-1:0][A_COLS-1:0];
+        local logic signed [QUANTIZED_WIDTH-1:0] matrix_B[B_ROWS-1:0][B_COLS-1:0];
+        
+        // Status variables for coverage
+        bit matrix_a_has_zeros, matrix_a_has_positives, matrix_a_has_negatives;
+        bit matrix_b_has_zeros, matrix_b_has_positives, matrix_b_has_negatives;
+        bit matrices_are_identity, matrices_have_diagonal;
+        bit matrix_a_constant, matrix_b_constant;
+        
+        // Covergroup for matrix patterns
+        covergroup matrix_coverage;
+            // Matrix A sign characteristics
+            coverpoint matrix_a_has_zeros {
+                bins has_zeros = {1};
+                bins no_zeros = {0};
+            }
+            
+            coverpoint matrix_a_has_positives {
+                bins has_positives = {1};
+                bins no_positives = {0};
+            }
+            
+            coverpoint matrix_a_has_negatives {
+                bins has_negatives = {1};
+                bins no_negatives = {0};
+            }
+            
+            // Matrix B sign characteristics
+            coverpoint matrix_b_has_zeros {
+                bins has_zeros = {1};
+                bins no_zeros = {0};
+            }
+            
+            coverpoint matrix_b_has_positives {
+                bins has_positives = {1};
+                bins no_positives = {0};
+            }
+            
+            coverpoint matrix_b_has_negatives {
+                bins has_negatives = {1};
+                bins no_negatives = {0};
+            }
+            
+            // Matrix patterns
+            coverpoint matrices_are_identity {
+                bins is_identity = {1};
+                bins not_identity = {0};
+            }
+            
+            coverpoint matrices_have_diagonal {
+                bins has_diagonal = {1};
+                bins no_diagonal = {0};
+            }
+            
+            coverpoint matrix_a_constant {
+                bins is_constant = {1};
+                bins not_constant = {0};
+            }
+            
+            coverpoint matrix_b_constant {
+                bins is_constant = {1};
+                bins not_constant = {0};
+            }
+            
+            // Cross coverage for interesting combinations
+            cross matrix_a_has_zeros, matrix_a_has_positives, matrix_a_has_negatives;
+            cross matrix_b_has_zeros, matrix_b_has_positives, matrix_b_has_negatives;
+        endgroup
+        
+        // Constructor 
+        function new(ref logic signed [QUANTIZED_WIDTH-1:0] a_matrix[A_ROWS-1:0][A_COLS-1:0], 
+                    ref logic signed [QUANTIZED_WIDTH-1:0] b_matrix[B_ROWS-1:0][B_COLS-1:0]);
+            // Store references to matrices
+            this.matrix_A = a_matrix;
+            this.matrix_B = b_matrix;
+            
+            // Create covergroup instance
+            matrix_coverage = new();
+        endfunction
+        
+        function bit has_negative_values(ref logic signed [QUANTIZED_WIDTH-1:0] matrix[A_ROWS-1:0][A_COLS-1:0]);
+            for (int i = 0; i < A_ROWS; i++) begin
+                for (int j = 0; j < A_COLS; j++) begin
+                    if (matrix[i][j] < 0) return 1;
+                end
+            end
+            return 0;
+        endfunction
+        
+        function bit has_zero_values(ref logic signed [QUANTIZED_WIDTH-1:0] matrix[A_ROWS-1:0][A_COLS-1:0]);
+            for (int i = 0; i < A_ROWS; i++) begin
+                for (int j = 0; j < A_COLS; j++) begin
+                    if (matrix[i][j] == 0) return 1;
+                end
+            end
+            return 0;
+        endfunction
+        
+        function bit has_positive_values(ref logic signed [QUANTIZED_WIDTH-1:0] matrix[A_ROWS-1:0][A_COLS-1:0]);
+            for (int i = 0; i < A_ROWS; i++) begin
+                for (int j = 0; j < A_COLS; j++) begin
+                    if (matrix[i][j] > 0) return 1;
+                end
+            end
+            return 0;
+        endfunction
+        
+        function bit is_identity_matrix(ref logic signed [QUANTIZED_WIDTH-1:0] matrix[A_ROWS-1:0][A_COLS-1:0]);
+            for (int i = 0; i < A_ROWS; i++) begin
+                for (int j = 0; j < A_COLS; j++) begin
+                    if (i == j) begin
+                        if (matrix[i][j] != 1) return 0;
+                    end else begin
+                        if (matrix[i][j] != 0) return 0;
+                    end
+                end
+            end
+            return 1;
+        endfunction
+        
+        function bit has_diagonal_pattern(ref logic signed [QUANTIZED_WIDTH-1:0] matrix[A_ROWS-1:0][A_COLS-1:0]);
+            for (int i = 0; i < A_ROWS; i++) begin
+                for (int j = 0; j < A_COLS; j++) begin
+                    if (i == j) begin
+                        if (matrix[i][j] == 0) return 0;
+                    end
+                end
+            end
+            return 1;
+        endfunction
+        
+        function bit has_constant_values(ref logic signed [QUANTIZED_WIDTH-1:0] matrix[A_ROWS-1:0][A_COLS-1:0]);
+            logic signed [QUANTIZED_WIDTH-1:0] first_val;
+            first_val = matrix[0][0];
+            
+            for (int i = 0; i < A_ROWS; i++) begin
+                for (int j = 0; j < A_COLS; j++) begin
+                    if (matrix[i][j] != first_val) return 0;
+                end
+            end
+            return 1;
+        endfunction
+        
+        // Method to update status and sample coverage
+        function void sample_coverage();
+            // Update status for matrix A
+            matrix_a_has_zeros = has_zero_values(matrix_A);
+            matrix_a_has_positives = has_positive_values(matrix_A);
+            matrix_a_has_negatives = has_negative_values(matrix_A);
+            matrix_a_constant = has_constant_values(matrix_A);
+            
+            // Update status for matrix B
+            matrix_b_has_zeros = has_zero_values(matrix_B);
+            matrix_b_has_positives = has_positive_values(matrix_B);
+            matrix_b_has_negatives = has_negative_values(matrix_B);
+            matrix_b_constant = has_constant_values(matrix_B);
+            
+            // Update pattern recognition
+            matrices_are_identity = is_identity_matrix(matrix_A) && is_identity_matrix(matrix_B);
+            matrices_have_diagonal = has_diagonal_pattern(matrix_A) || has_diagonal_pattern(matrix_B);
+            
+            // Sample the covergroup
+            matrix_coverage.sample();
+        endfunction
+        
+        // Method to get coverage percentage
+        function real get_coverage();
+            return matrix_coverage.get_coverage();
+        endfunction
+        
+        // Method to display coverage report
+        function void report_coverage();
+            $display("Matrix Coverage Report:");
+            $display("  Coverage percentage: %.2f%%", matrix_coverage.get_coverage());
+            $display("  Matrices analyzed: A(%0dx%0d), B(%0dx%0d)", A_ROWS, A_COLS, B_ROWS, B_COLS);
+        endfunction
+    endclass
 
     // DUT instantiation
     STA #(
@@ -180,7 +358,6 @@ module STA_tb;
     bit fed_a[A_ROWS][A_COLS];
     bit fed_b[B_ROWS][B_COLS];
     int weight_idx, data_idx;
-    int row_a, col_a, row_b, col_b;
 
     task run_test_cycle();
         // Reset everything
@@ -433,10 +610,14 @@ module STA_tb;
         calculate_expected_result();
     endtask
 
+
     task prepare_randc_tests(int num_tests);
+        // instance for value coverage
         MatrixElementGenerator gen_a = new();
         MatrixElementGenerator gen_b = new();
-        
+
+        MatrixCoverageCollector matrix_coverage_collector = new(matrix_A, matrix_B);
+
         $display("\n=== Starting %0d Randomized Tests with randc ===", num_tests);
         
         for (int test_idx = 0; test_idx < num_tests; test_idx++) begin
@@ -456,6 +637,7 @@ module STA_tb;
             for (j = 0; j < A_COLS; j++) begin
                 void'(gen_a.randomize());
                 matrix_A[i][j] = gen_a.value;
+                gen_a.sample_coverage();  // Sample coverage for each value
             end
             end
             
@@ -464,8 +646,12 @@ module STA_tb;
             for (j = 0; j < B_COLS; j++) begin
                 void'(gen_b.randomize());
                 matrix_B[i][j] = gen_b.value;
+                gen_b.sample_coverage();  // Sample coverage for each value
             end
             end
+
+            // Sample matrix-level coverage 
+            matrix_coverage_collector.sample_coverage();
             
             // Display the generated matrices
             $display("Test %0d: Matrix A (%0d x %0d):", test_idx+1, A_ROWS, A_COLS);
@@ -488,7 +674,20 @@ module STA_tb;
             calculate_expected_result();
             // Run the test cycle
             run_test_cycle();
+
+            // Simple coverage report after each test
+            $display("\n--- Coverage after test %0d ---", test_idx+1);
+            $display("Matrix A element value coverage: %.2f%%", gen_a.value_coverage.get_coverage());
+            $display("Matrix B element value coverage: %.2f%%", gen_b.value_coverage.get_coverage());
+            $display("Matrix-level pattern coverage: %.2f%%", matrix_coverage_collector.get_coverage());
+            
         end
+        
+        // Final coverage report
+        $display("\n=== Final Coverage Report ===");
+        $display("Matrix A element value coverage: %.2f%%", gen_a.value_coverage.get_coverage());
+        $display("Matrix B element value coverage: %.2f%%", gen_b.value_coverage.get_coverage());
+        matrix_coverage_collector.report_coverage();
         
         // Final summary
         $display("\n=== Completed %0d Randomized Tests ===", num_tests);
@@ -618,15 +817,6 @@ module STA_tb;
             $display("FAIL: %0d verification errors found!", error_count);
         end
     endtask
-
-    // // Helper function to print coverage bins 
-    // function void print_coverage_bins(covergroup cg);
-    //     $display("  negative bin coverage: collected");
-    //     $display("  zero bin coverage: collected");
-    //     $display("  small_pos bin coverage: collected");
-    //     $display("  medium_pos bin coverage: collected");
-    //     $display("  large_pos bin coverage: collected");
-    // endfunction
-    
-    
-endmodule
+        
+        
+    endmodule
