@@ -2,7 +2,7 @@
 
 # Set top levels
 synthesis.inputs.top_module: "STA"
-sim.inputs.tb_name: "STA_tb" # Testbench name
+sim.inputs.tb_name: "STA_tb_quick" # Testbench name
 
 # Don't synthesize these gate-level netlist modules
 synthesis.inputs.preserve_modules: []
@@ -22,8 +22,8 @@ vlsi.inputs.placement_constraints:
   - path: "TOP" # (this name isn't actually checked...)
     type: toplevel
     # define chip dimensions
-    width:  200
-    height: 200
+    width:  2000
+    height: 2000
     x: 0
     y: 0
     margins: {left: 0, right: 0, top: 0, bottom: 0}

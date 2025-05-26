@@ -1,4 +1,4 @@
-module STA_tb;
+module STA_tb_quick;
 
     initial begin
         $fsdbDumpfile("waveform.fsdb");
