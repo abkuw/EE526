@@ -1,5 +1,5 @@
 /**
- * DP module for Systolic Tensor Array (STA) Processing Element
+ * Optimized DP module for Systolic Tensor Array (STA) Processing Element
  * Performs B parallel multiplications, sums the products, and accumulates.
  * Assumes signed inputs/weights.
  */
@@ -23,50 +23,64 @@ module DP #(
     output logic signed [4*QUANTIZED_WIDTH-1:0] result
 );
 
-    // Calculate dot product combinationally
-    function automatic logic signed [4*QUANTIZED_WIDTH-1:0] calc_dot_product(
-        logic signed [QUANTIZED_WIDTH-1:0] data [B-1:0],
-        logic signed [QUANTIZED_WIDTH-1:0] weights [B-1:0]
-    );
-        logic signed [4*QUANTIZED_WIDTH-1:0] sum = 0;
-        for (int i = 0; i < B; i++) begin
-            sum += data[i] * weights[i];
-        end
-        return sum;
-    endfunction
-    
-    // Internal signals
+    // Optimized internal signals
+    logic signed [2*QUANTIZED_WIDTH-1:0] products [B-1:0];
+    logic signed [4*QUANTIZED_WIDTH-1:0] dot_product;
     logic signed [4*QUANTIZED_WIDTH-1:0] result_reg;
     
-    // Pass-through for systolic array
+    // Generate parallel multipliers for better synthesis optimization
+    genvar i;
+    generate
+        for (i = 0; i < B; i++) begin : gen_multipliers
+            always_ff @(posedge clk_i) begin
+                products[i] <= data_i[i] * weight_i[i];
+            end
+        end
+    endgenerate
+    
+    // Optimized dot product calculation using tree reduction for better timing
+    always_comb begin
+        case (B)
+            1: dot_product = products[0];
+            2: dot_product = products[0] + products[1];
+            4: dot_product = (products[0] + products[1]) + (products[2] + products[3]);
+            8: dot_product = ((products[0] + products[1]) + (products[2] + products[3])) +
+                           ((products[4] + products[5]) + (products[6] + products[7]));
+            default: begin
+                // Fallback for other values of B
+                dot_product = '0;
+                for (int j = 0; j < B; j++) begin
+                    dot_product += products[j];
+                end
+            end
+        endcase
+    end
+    
+    // Optimized pass-through logic (unchanged for correctness)
     always_ff @(posedge clk_i or posedge reset_i) begin
         if (reset_i) begin
-            for (int i = 0; i < B; i++) begin
-                data_v_o[i] <= '0;
-                weight_h_o[i] <= '0;
-            end
+            data_v_o <= '{default: '0};
+            weight_h_o <= '{default: '0};
         end else begin
-            for (int i = 0; i < B; i++) begin
-                data_v_o[i] <= data_i[i];
-                weight_h_o[i] <= weight_i[i];
-            end
+            data_v_o <= data_i;
+            weight_h_o <= weight_i;
         end
     end
     
-    // Accumulation logic
+    // Optimized accumulation logic with single calculation
     always_ff @(posedge clk_i or posedge reset_i) begin
         if (reset_i) begin
             result_reg <= '0;
-        end else if (clear_acc_i) begin
-            // When clear_acc is asserted, start with current dot product only
-            result_reg <= calc_dot_product(data_i, weight_i);
         end else begin
-            // Normal accumulation
-            result_reg <= result_reg + calc_dot_product(data_i, weight_i);
+            if (clear_acc_i) begin
+                result_reg <= dot_product;
+            end else begin
+                result_reg <= result_reg + dot_product;
+            end
         end
     end
     
-    // Assign result
+    // Direct assignment for better synthesis
     assign result = result_reg;
 
 endmodule
